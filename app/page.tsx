@@ -3,12 +3,13 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { ManifestoSection } from "@/components/landing/manifesto-section";
 import { CinematicFX } from "@/components/landing/cinematic-fx";
 import { FeaturesSection } from "@/components/landing/features-section";
-import { ExpandingCanvasSection } from "@/components/landing/expanding-canvas-section";
+import { WhyUsingKizunaSection } from "@/components/landing/why-using-kizuna";
 import { CanvasStorySection } from "@/components/landing/canvas-story-section";
 import { SecondaryPeek } from "@/components/landing/secondary-peek";
 import { DashboardPeek } from "@/components/landing/dashboard-peek";
 import { ExpertInsightSection } from "@/components/landing/expert-insight-section";
 import { CtaSection } from "@/components/landing/cta-section";
+import { Footer } from "@/components/landing/footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <SecondaryPeek />
       <ExpertInsightSection />
       <CtaSection />
+      <Footer />
     </main>
   );
 }

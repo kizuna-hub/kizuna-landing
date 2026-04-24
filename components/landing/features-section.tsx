@@ -43,7 +43,7 @@ export function FeaturesSection() {
                         Kizuna Hub transforms raw concepts into structured, legally-protected digital assets in minutes. Focus on the build, we handle the foundation.
                     </p>
 
-                    <button className="mt-8 border border-white/20 text-[14px] bg-white text-[#102c1e] font-bold px-8 py-3.5 rounded-[12px] transition-all duration-300 hover:bg-emerald-400 hover:text-white tracking-wide">
+                    <button className="mt-8 border border-white/20 text-[14px] bg-white text-[#102c1e] font-bold px-8 py-3.5 rounded-[12px] transition-all duration-300 tracking-wide">
                         Explore All Features
                     </button>
                 </div>
