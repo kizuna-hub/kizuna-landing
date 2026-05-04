@@ -6,7 +6,7 @@ import { CtaFloatingBackground } from "./cta-floating-background";
 export function CtaSection() {
     return (
         // Tăng lên 150vh để có đủ khoảng trống phía dưới cho dàn ảnh trôi lên hết
-        <section className="relative bg-[#0a1c13] min-h-[150vh] overflow-hidden border-t border-white/5 flex flex-col items-center justify-start pt-[25vh]">
+        <section className="relative bg-[#102c1e] min-h-[150vh] overflow-hidden border-t border-white/5 flex flex-col items-center justify-start pt-[25vh]">
 
             <CtaFloatingBackground />
 

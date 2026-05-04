@@ -1,6 +1,6 @@
 export function Footer() {
     return (
-        <footer className="bg-[#0a1c13] w-full border-t border-white/5 pt-16 pb-12 px-6 md:px-12">
+        <footer className="bg-[#102c1e] w-full border-t border-white/5 pt-16 pb-12 px-6 md:px-12">
             <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between h-full">
 
                 {/* KHỐI BÊN TRÁI: Logo, Socials & Copyright */}
