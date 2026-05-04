@@ -17,19 +17,19 @@ export function CtaSection() {
                 </div>
 
                 <h2 className="text-6xl md:text-7xl font-serif font-medium text-white tracking-tight mb-6">
-                    Experience Kizuna Today
+                    Trải nghiệm Kizuna Ngay
                 </h2>
 
                 <p className="text-zinc-400 text-lg md:text-xl font-light tracking-wide mb-10">
-                    Your entire creative process, in one place.
+                    Toàn bộ quy trình sáng tạo của bạn, gói gọn ở một nơi.
                 </p>
 
                 <button className="bg-white text-[#0a1c13] hover:bg-zinc-100 transition-colors font-bold px-8 py-3.5 rounded-2xl shadow-xl shadow-emerald-900/20 text-[15px]">
-                    Sign Up Now
+                    Đăng ký Ngay
                 </button>
 
                 <p className="mt-6 text-[11px] text-zinc-500 font-medium tracking-wide">
-                    We are open to the public for a<br /> limited time before we waitlist again.
+                    Chúng tôi mở cửa cho công chúng trong một<br /> thời gian giới hạn trước khi mở lại danh sách chờ.
                 </p>
             </div>
         </section>

@@ -54,10 +54,10 @@ export function Navbar() {
 
                 {/* LINKS Ở GIỮA */}
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <Link href="#ecosystem" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Ecosystem</Link>
-                    <Link href="#security" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Security</Link>
-                    <Link href="#heritage" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Heritage</Link>
-                    <Link href="#pricing" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Pricing</Link>
+                    <Link href="#ecosystem" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Hệ sinh thái</Link>
+                    <Link href="#security" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảo mật</Link>
+                    <Link href="#heritage" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Di sản</Link>
+                    <Link href="#pricing" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảng giá</Link>
                 </nav>
 
                 {/* NÚT ACTION BÊN PHẢI */}
@@ -66,7 +66,7 @@ export function Navbar() {
                         "text-sm font-medium hover:opacity-70 transition-colors duration-[800ms]",
                         isScrolled ? "text-zinc-900" : "text-white"
                     )}>
-                        Log In
+                        Đăng nhập
                     </Link>
 
                     <Link href="/signup" className={cn(
@@ -75,7 +75,7 @@ export function Navbar() {
                             ? "bg-[#102c1e] text-white hover:bg-[#102c1e]/80 rounded-[8px]" // Khi cuộn, nút bấm cũng bo góc vuông vức theo Navbar
                             : "bg-white text-[#102c1e] hover:bg-white/95 shadow-[0_0_20px_rgba(16,185,129,0.3)] rounded-[8px]"
                     )}>
-                        Get Access
+                        Nhận quyền truy cập
                     </Link>
                 </div>
             </div>

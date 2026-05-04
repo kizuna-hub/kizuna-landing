@@ -6,15 +6,15 @@ import { Folder } from "lucide-react";
 
 const CTA_BROLL_ITEMS = [
     // --- LỚP TRÊN (Bắt đầu hiện ngay dưới nút) ---
-    { id: 1, type: 'folder', title: 'Meeting Notes', items: '4502 items', top: '50%', left: '8%', width: '220px', height: '220px', speed: 0.12 },
+    { id: 1, type: 'folder', title: 'Ghi chú Cuộc họp', items: '4502 mục', top: '50%', left: '8%', width: '220px', height: '220px', speed: 0.12 },
     { id: 2, type: 'image', src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop', top: '55%', left: '30%', width: '240px', height: '340px', speed: 0.2, badge: 'now' },
-    { id: 3, type: 'folder', title: 'B-roll', items: '230 items', top: '52%', right: '28%', width: '220px', height: '220px', speed: 0.15 },
+    { id: 3, type: 'folder', title: 'B-roll', items: '230 mục', top: '52%', right: '28%', width: '220px', height: '220px', speed: 0.15 },
     { id: 4, type: 'image', src: 'https://images.unsplash.com/photo-1522071823991-b9671f9d7d17?q=80&w=800&auto=format&fit=crop', top: '48%', right: '5%', width: '280px', height: '180px', speed: 0.1, badge: 'now' },
 
     // --- LỚP GIỮA ---
-    { id: 5, type: 'note', title: 'Newsletter Draft', desc: 'Most skills will be irrelevant in 10 years...', top: '65%', left: '4%', width: '260px', height: '340px', speed: 0.18, badge: '5hr' },
+    { id: 5, type: 'note', title: 'Bản nháp Bản tin', desc: 'Hầu hết các kỹ năng sẽ trở nên lỗi thời trong 10 năm tới...', top: '65%', left: '4%', width: '260px', height: '340px', speed: 0.18, badge: '5h' },
     { id: 6, type: 'image', src: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop', top: '75%', left: '25%', width: '300px', height: '200px', speed: 0.14 },
-    { id: 7, type: 'folder', title: 'Brand Deals', items: '12 items', top: '70%', left: '50%', width: '180px', height: '180px', speed: 0.22 },
+    { id: 7, type: 'folder', title: 'Thương vụ', items: '12 mục', top: '70%', left: '50%', width: '180px', height: '180px', speed: 0.22 },
 
     // --- LỚP ĐÁY (Kết thúc trước khi tới Footer) ---
     { id: 8, type: 'image', src: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop', top: '72%', right: '20%', width: '260px', height: '260px', speed: 0.16, badge: 'now' },

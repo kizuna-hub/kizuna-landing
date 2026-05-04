@@ -42,7 +42,7 @@ export function Footer() {
                     </div>
 
                     <div className="mt-24 md:mt-32 text-[11px] text-zinc-500 font-medium tracking-wide">
-                        © {new Date().getFullYear()} Kizuna Hub, Inc. All rights reserved.
+                        © {new Date().getFullYear()} Kizuna Hub, Inc. Đã đăng ký bản quyền.
                     </div>
                 </div>
 
@@ -50,21 +50,21 @@ export function Footer() {
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-12 md:gap-24 mt-16 md:mt-0">
                     <div className="flex flex-col gap-3.5">
                         <h4 className="text-white text-[13px] font-semibold tracking-wide mb-1">Kizuna</h4>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Pricing</a>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Changelog</a>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors border-b border-zinc-600/50 pb-0.5 w-fit hover:border-white/50">Businesses</a>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Bảng giá</a>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Nhật ký thay đổi</a>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors border-b border-zinc-600/50 pb-0.5 w-fit hover:border-white/50">Doanh nghiệp</a>
                     </div>
 
                     <div className="flex flex-col gap-3.5">
-                        <h4 className="text-white text-[13px] font-semibold tracking-wide mb-1">Help</h4>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Support</a>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">FAQs</a>
+                        <h4 className="text-white text-[13px] font-semibold tracking-wide mb-1">Trợ giúp</h4>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Hỗ trợ</a>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors">Câu hỏi thường gặp</a>
                     </div>
 
                     <div className="flex flex-col gap-3.5">
-                        <h4 className="text-white text-[13px] font-semibold tracking-wide mb-1">Legals</h4>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors border-b border-zinc-600/50 pb-0.5 w-fit hover:border-white/50">Terms</a>
-                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors border-b border-zinc-600/50 pb-0.5 w-fit hover:border-white/50">Privacy Policy</a>
+                        <h4 className="text-white text-[13px] font-semibold tracking-wide mb-1">Pháp lý</h4>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors border-b border-zinc-600/50 pb-0.5 w-fit hover:border-white/50">Điều khoản</a>
+                        <a href="#" className="text-zinc-400 text-[13px] hover:text-white transition-colors border-b border-zinc-600/50 pb-0.5 w-fit hover:border-white/50">Bảo mật thông tin</a>
                     </div>
                 </div>
             </div>

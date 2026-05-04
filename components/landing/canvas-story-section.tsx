@@ -95,7 +95,7 @@ export function CanvasStorySection() {
                                 <Sparkles className="relative z-10" size={28} />
                             </div>
                             <h2 className="text-xl font-bold text-zinc-900 tracking-tight">Kizuna Core</h2>
-                            <p className="text-sm text-zinc-500 mt-2 text-center">Synthesizing architecture</p>
+                            <p className="text-sm text-zinc-500 mt-2 text-center">Tổng hợp kiến trúc</p>
                         </motion.div>
 
                         {/* ================= THẺ VỆ TINH ================= */}
@@ -105,8 +105,8 @@ export function CanvasStorySection() {
                             <div className="w-[280px] bg-white shadow-xl rounded-2xl overflow-hidden border border-zinc-200 -translate-x-1/2 -translate-y-1/2">
                                 <div className="h-32 w-full"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=400" alt="Data" className="w-full h-full object-cover" /></div>
                                 <div className="p-5">
-                                    <div className="flex items-center gap-2 mb-2"><Database size={16} className="text-emerald-600" /><span className="text-xs font-bold text-emerald-600 uppercase">Raw Data</span></div>
-                                    <h3 className="font-semibold text-zinc-900">Market Repo</h3>
+                                    <div className="flex items-center gap-2 mb-2"><Database size={16} className="text-emerald-600" /><span className="text-xs font-bold text-emerald-600 uppercase">Dữ liệu Thô</span></div>
+                                    <h3 className="font-semibold text-zinc-900">Dữ liệu Thị trường</h3>
                                 </div>
                             </div>
                         </motion.div>
@@ -115,8 +115,8 @@ export function CanvasStorySection() {
                             <div className="w-[280px] bg-white shadow-xl rounded-2xl overflow-hidden border border-zinc-200 -translate-x-1/2 -translate-y-1/2">
                                 <div className="h-32 w-full"><img src="https://images.unsplash.com/photo-1507925922893-ce35afc443ae?auto=format&fit=crop&q=80&w=400" alt="Legal" className="w-full h-full object-cover" /></div>
                                 <div className="p-5">
-                                    <div className="flex items-center gap-2 mb-2"><FileText size={16} className="text-blue-600" /><span className="text-xs font-bold text-blue-600 uppercase">Compliance</span></div>
-                                    <h3 className="font-semibold text-zinc-900">Local Law NQ-54</h3>
+                                    <div className="flex items-center gap-2 mb-2"><FileText size={16} className="text-blue-600" /><span className="text-xs font-bold text-blue-600 uppercase">Tuân thủ</span></div>
+                                    <h3 className="font-semibold text-zinc-900">Luật Địa phương NQ-54</h3>
                                 </div>
                             </div>
                         </motion.div>
@@ -125,8 +125,8 @@ export function CanvasStorySection() {
                             <div className="w-[280px] bg-white shadow-xl rounded-2xl overflow-hidden border border-zinc-200 -translate-x-1/2 -translate-y-1/2">
                                 <div className="h-32 w-full"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=400" alt="Architecture" className="w-full h-full object-cover" /></div>
                                 <div className="p-5">
-                                    <div className="flex items-center gap-2 mb-2"><Blocks size={16} className="text-orange-600" /><span className="text-xs font-bold text-orange-600 uppercase">Structure</span></div>
-                                    <h3 className="font-semibold text-zinc-900">Cap Table Draft</h3>
+                                    <div className="flex items-center gap-2 mb-2"><Blocks size={16} className="text-orange-600" /><span className="text-xs font-bold text-orange-600 uppercase">Cấu trúc</span></div>
+                                    <h3 className="font-semibold text-zinc-900">Bản nháp Cap Table</h3>
                                 </div>
                             </div>
                         </motion.div>
@@ -135,8 +135,8 @@ export function CanvasStorySection() {
                             <div className="w-[280px] bg-white shadow-xl rounded-2xl overflow-hidden border border-zinc-200 -translate-x-1/2 -translate-y-1/2">
                                 <div className="h-32 w-full"><img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=400" alt="Code" className="w-full h-full object-cover grayscale opacity-80" /></div>
                                 <div className="p-5">
-                                    <div className="flex items-center gap-2 mb-2"><Code2 size={16} className="text-purple-600" /><span className="text-xs font-bold text-purple-600 uppercase">Technical</span></div>
-                                    <h3 className="font-semibold text-zinc-900">Core IP Algorithm</h3>
+                                    <div className="flex items-center gap-2 mb-2"><Code2 size={16} className="text-purple-600" /><span className="text-xs font-bold text-purple-600 uppercase">Kỹ thuật</span></div>
+                                    <h3 className="font-semibold text-zinc-900">Thuật toán IP Cốt lõi</h3>
                                 </div>
                             </div>
                         </motion.div>
@@ -156,7 +156,7 @@ export function CanvasStorySection() {
                             className="absolute z-10 bg-white/80 backdrop-blur-sm border border-emerald-200 shadow-lg rounded-full px-6 py-3 flex items-center gap-3 w-max -translate-x-1/2"
                         >
                             <div className="w-4 h-4 rounded-full border-2 border-emerald-500 border-t-transparent animate-spin" />
-                            <p className="text-sm font-medium text-emerald-800">Validating IP and Structuring Cap Table...</p>
+                            <p className="text-sm font-medium text-emerald-800">Đang xác thực IP và cấu trúc bảng vốn...</p>
                         </motion.div>
 
                         <motion.div
@@ -166,10 +166,10 @@ export function CanvasStorySection() {
                             <div className="grid md:grid-cols-2">
                                 <div className="p-12 flex flex-col justify-center">
                                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 mb-6"><ShieldCheck size={24} /></div>
-                                    <h3 className="text-3xl font-bold text-zinc-900 mb-4 tracking-tight">Secured Startup Blueprint</h3>
-                                    <p className="text-zinc-500 mb-8 leading-relaxed">Your fragmented ideas and legal constraints have been unified into a deployable asset.</p>
+                                    <h3 className="text-3xl font-bold text-zinc-900 mb-4 tracking-tight">Bản thiết kế Startup Bảo mật</h3>
+                                    <p className="text-zinc-500 mb-8 leading-relaxed">Các ý tưởng rời rạc và khó khăn pháp lý của bạn đã được thống nhất thành một tài sản có thể triển khai.</p>
                                     <button className="w-max bg-[#102c1e] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-[#102c1e]/90 flex items-center gap-2">
-                                        Review Blueprint <ArrowRight size={16} />
+                                        Xem lại Bản thiết kế <ArrowRight size={16} />
                                     </button>
                                 </div>
                                 <div className="bg-zinc-100 relative hidden md:block">

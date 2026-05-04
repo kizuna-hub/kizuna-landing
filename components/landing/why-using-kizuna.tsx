@@ -4,29 +4,29 @@ import { motion } from "framer-motion";
 
 const CARDS = [
     {
-        title: "Student Founders",
-        desc: "Standardize pitch decks and protect IP instantly.",
+        title: "Nhà sáng lập sinh viên",
+        desc: "Chuẩn hóa bài thuyết trình và bảo vệ IP ngay lập tức.",
         // Tím than (Deep Muted Purple) - Bí ẩn, sáng tạo
         bg: "bg-[#8e6b9c]",
         image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=800&auto=format&fit=crop"
     },
     {
-        title: "Accelerators",
-        desc: "Manage cohorts and workspace with ease.",
+        title: "Vườn ươm doanh nghiệp",
+        desc: "Quản lý các khóa học và không gian làm việc dễ dàng.",
         // Cam đất (Earthy Amber) - Trầm ấm, thực chiến
         bg: "bg-[#db9d68]",
         image: "https://images.unsplash.com/photo-1522071823991-b9671f9d7d17?q=80&w=800&auto=format&fit=crop"
     },
     {
-        title: "Early Stage Startups",
-        desc: "Chart your traction and secure your assets.",
+        title: "Startup giai đoạn đầu",
+        desc: "Vạch ra lực kéo (traction) và bảo mật tài sản của bạn.",
         // Xanh rêu Eden (Sage Green) - Tăng trưởng, bền vững
         bg: "bg-[#679a77]",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
     },
     {
-        title: "Pioneer Mentors",
-        desc: "Connect directly via seamless video calls.",
+        title: "Cố vấn tiên phong",
+        desc: "Kết nối trực tiếp qua các cuộc gọi video mượt mà.",
         // Xanh lam trầm (Muted Royal Blue) - Chuyên nghiệp, tin cậy
         bg: "bg-[#4a72b0]",
         image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop"
@@ -41,10 +41,10 @@ export function WhyUsingKizunaSection() {
             {/* Header Block */}
             <div className="flex flex-col items-center px-4 relative z-10 mb-24">
                 <span className="uppercase tracking-[0.2em] text-xs text-zinc-400 font-semibold mb-6">
-                    Who is Kizuna For
+                    Kizuna dành cho ai
                 </span>
                 <h2 className="text-5xl md:text-6xl font-medium text-center max-w-4xl mx-auto tracking-tight font-serif text-[#1b2b22]">
-                    For <span className="font-serif italic text-emerald-700 font-light">Visionaries</span> & Teams Who Want All Their Startup Assets In One Place.
+                    Dành cho những <span className="font-serif italic text-emerald-700 font-light">Người có tầm nhìn</span> & các Đội ngũ muốn có tất cả Tài sản Startup của họ ở một nơi.
                 </h2>
             </div>
 

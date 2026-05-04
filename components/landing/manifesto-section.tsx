@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 export function ManifestoSection() {
     // Tách các đoạn văn ra thành mảng để dễ dàng map() và gắn hiệu ứng cho từng câu một
     const paragraphs = [
-        "We all get stuck.",
-        "The cap table structuring. The IP protection. The seed round pitch.",
-        "We sign up for generic tools that are supposed to help us, but they just leave us with more to plan and organize.",
-        "Our ideas get lost in the abyss, or the fear of getting our startup ideas stolen makes moving forward difficult.",
-        "Having the right place to validate, protect, and scale your startup is invaluable."
+        "Tất cả chúng ta đều có lúc bế tắc.",
+        "Cấu trúc bảng vốn. Bảo vệ IP. Gọi vốn vòng hạt giống.",
+        "Chúng ta đăng ký những công cụ chung chung được cho là giúp ích, nhưng chúng chỉ để lại cho ta nhiều thứ phải lập kế hoạch và gánh vác hơn.",
+        "Ý tưởng của chúng ta rơi vào khoảng không, hoặc nỗi sợ bị đánh cắp ý tưởng khiến việc tiến bước trở nên khó khăn.",
+        "Có một nơi phù hợp để xác thực, bảo vệ và mở rộng Startup của bạn là điều vô giá."
     ];
 
     return (

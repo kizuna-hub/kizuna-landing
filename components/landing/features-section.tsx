@@ -4,23 +4,23 @@ export function FeaturesSection() {
     const features = [
         {
             icon: <FileLock className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "IP Protection Ledger",
-            desc: "Secure your competitive advantage with immutable timestamping. We create a verifiable paper trail for your algorithms and designs before they ever leave your workspace.",
+            title: "Sổ cái bảo vệ IP",
+            desc: "Bảo vệ lợi thế cạnh tranh của bạn với dấu thời gian (timestamping) không thể thay đổi. Chúng tôi tạo ra dấu vết tài liệu có thể xác minh cho các thuật toán và thiết kế của bạn trước khi chúng rời khỏi không gian làm việc.",
         },
         {
             icon: <Bot className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "AI Policy Navigator",
-            desc: "Navigate the complex landscape of regional tech regulations. Our AI automatically aligns your pitch decks with Decree 13 and local compliance frameworks effortlessly.",
+            title: "Trợ lý chính sách AI",
+            desc: "Nắm bắt bức tranh phức tạp về quy định công nghệ khu vực. AI của chúng tôi tự động điều chỉnh các bài thuyết trình (pitch deck) của bạn để phù hợp với Nghị định 13 và các khuôn khổ tuân thủ địa phương một cách dễ dàng.",
         },
         {
             icon: <Users className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "Mentor Matching",
-            desc: "Gain access to a curated network of Pioneer Founders. We connect you with industry veterans who have successfully navigated the exact growth stage you're entering.",
+            title: "Kết nối Cố vấn",
+            desc: "Nhận quyền truy cập vào mạng lưới được chọn lọc cẩn thận gồm các nhà sáng lập tiên phong (Pioneer Founders). Chúng tôi kết nối bạn với các chuyên gia dày dạn kinh nghiệm trong ngành, những người đã vượt qua thành công giai đoạn tăng trưởng mà bạn đang bước vào.",
         },
         {
             icon: <TrendingUp className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "VC Readiness",
-            desc: "Generate data-backed reports that speak the language of investors. Transform messy internal metrics into clean, professional diligence rooms that close seed rounds.",
+            title: "Sẵn sàng gọi vốn VC",
+            desc: "Tạo các báo cáo dựa trên dữ liệu bằng ngôn ngữ của các nhà đầu tư. Biến các số liệu nội bộ lộn xộn thành các phòng thẩm định (diligence room) chuyên nghiệp, sạch sẽ để chốt vòng hạt giống.",
         },
     ];
 
@@ -32,19 +32,19 @@ export function FeaturesSection() {
                 {/* Left Column - Chiếm 6 cột */}
                 <div className="lg:col-span-6 lg:sticky lg:top-1/4 self-start pr-12">
                     <div className="flex items-center gap-2 text-white/60 text-[10px] tracking-[0.3em] font-bold uppercase mb-6">
-                        <Sparkles className="w-3.5 h-3.5 text-emerald-400" /> AI-Powered Validation
+                        <Sparkles className="w-3.5 h-3.5 text-emerald-400" /> Xác thực bằng AI
                     </div>
 
                     <h2 className="font-serif text-4xl lg:text-[3.8rem] font-semibold text-white tracking-tighter leading-[1.1]">
-                        Standardize Ideas.<br /> Protect Your Vision.
+                        Chuẩn hóa ý tưởng.<br /> Bảo vệ tầm nhìn.
                     </h2>
 
                     <p className="text-zinc-400 text-sm lg:text-base mt-6 max-w-sm leading-relaxed font-light">
-                        Kizuna Hub transforms raw concepts into structured, legally-protected digital assets in minutes. Focus on the build, we handle the foundation.
+                        Kizuna Hub biến các ý tưởng thô sơ thành tài sản kỹ thuật số có cấu trúc và được bảo vệ pháp lý chỉ trong vài phút. Tập trung xây dựng, chúng tôi lo phần nền tảng.
                     </p>
 
                     <button className="mt-8 border border-white/20 text-[14px] bg-white text-[#102c1e] font-bold px-8 py-3.5 rounded-[12px] transition-all duration-300 tracking-wide">
-                        Explore All Features
+                        Khám phá tất cả tính năng
                     </button>
                 </div>
 

@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Kizuna Hub",
-  description: "The Launchpad That Protects Your Startup",
+  description: "Bệ phóng bảo vệ Startup của bạn",
 };
 
 export default function RootLayout({

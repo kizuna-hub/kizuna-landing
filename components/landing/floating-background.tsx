@@ -8,13 +8,13 @@ import { Folder } from "lucide-react";
 const BROLL_ITEMS = [
     // --- CỤM BÊN TRÁI (Lấp ló sau góc trái Dashboard) ---
     { id: 1, type: 'image', src: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=600&auto=format&fit=crop', top: '35%', left: '5%', width: '220px', speed: 0.15, badge: 'now' },
-    { id: 2, type: 'folder', title: 'Content', top: '41%', left: '21%', width: '180px', speed: 0.22 },
+    { id: 2, type: 'folder', title: 'Nội dung', top: '41%', left: '21%', width: '180px', speed: 0.22 },
     { id: 3, type: 'image', src: 'https://images.unsplash.com/photo-1522071823991-b9671f9d7d17?q=80&w=600&auto=format&fit=crop', top: '38%', left: '34.3%', width: '220px', speed: 0.1 },
-    { id: 4, type: 'note', title: 'Q3 Objectives', desc: '1. Launch new landing page\n2. Secure seed funding...', top: '42%', left: '50%', width: '220px', speed: 0.28 },
+    { id: 4, type: 'note', title: 'Mục tiêu Quý 3', desc: '1. Khởi chạy landing page mới\n2. Gọi vốn hạt giống...', top: '42%', left: '50%', width: '220px', speed: 0.28 },
 
     // --- CỤM Ở GIỮA (Núp ngay sau lưng Dashboard, sát mép nút bấm) ---
-    { id: 5, type: 'folder', title: 'Brand Deals', top: '40%', left: '66%', width: '180px', speed: 0.18 },
-    { id: 6, type: 'note', title: 'Newsletter Draft', desc: 'Most skills will be irrelevant in 10 years.\nThat is, unless you completely change...', top: '37%', right: '5%', width: '235px', speed: 0.15, badge: '5hr' },
+    { id: 5, type: 'folder', title: 'Thương vụ', top: '40%', left: '66%', width: '180px', speed: 0.18 },
+    { id: 6, type: 'note', title: 'Bản nháp Bản tin', desc: 'Hầu hết kỹ năng sẽ trở nên lỗi thời trong 10 năm tới.\nTrừ khi bạn hoàn toàn thay đổi...', top: '37%', right: '5%', width: '235px', speed: 0.15, badge: '5h' },
     { id: 7, type: 'image', src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop', top: '58%', left: '5%', width: '220px', speed: 0.2 },
 
     // --- CỤM BÊN PHẢI (Lấp ló sau góc phải Dashboard) ---
