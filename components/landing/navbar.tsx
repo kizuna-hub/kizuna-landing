@@ -75,7 +75,7 @@ export function Navbar() {
                             ? "bg-[#102c1e] text-white hover:bg-[#102c1e]/80 rounded-[8px]" // Khi cuộn, nút bấm cũng bo góc vuông vức theo Navbar
                             : "bg-white text-[#102c1e] hover:bg-white/95 shadow-[0_0_20px_rgba(16,185,129,0.3)] rounded-[8px]"
                     )}>
-                        Nhận quyền truy cập
+                        Truy cập
                     </Link>
                 </div>
             </div>

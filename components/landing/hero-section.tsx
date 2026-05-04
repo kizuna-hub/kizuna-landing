@@ -17,7 +17,7 @@ export function HeroSection() {
     const dashboardY = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     return (
-        <div ref={containerRef} className="relative bg-[#102c1e] flex flex-col items-center overflow-x-hidden">
+        <div ref={containerRef} className="relative bg-[#102c1e] mt-20 flex flex-col items-center overflow-x-hidden">
             <FloatingBackground />
 
             {/* Content: Tăng padding bottom để tạo "đất" cho cái ảnh trượt lên mà ko đè chữ */}
