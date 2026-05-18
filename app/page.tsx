@@ -8,6 +8,7 @@ import { CanvasStorySection } from "@/components/landing/canvas-story-section";
 import { SecondaryPeek } from "@/components/landing/secondary-peek";
 import { DashboardPeek } from "@/components/landing/dashboard-peek";
 import { ExpertInsightSection } from "@/components/landing/expert-insight-section";
+import { FeaturesPage } from "./features/page";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Footer } from "@/components/landing/footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroSection />
       <ManifestoSection />
       {/* <CanvasStorySection /> */}
+      <FeaturesPage />
       <FeaturesSection />
       <SecondaryPeek />
       <ExpertInsightSection />
