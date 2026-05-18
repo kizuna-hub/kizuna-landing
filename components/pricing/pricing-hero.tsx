@@ -29,8 +29,7 @@ export function PricingHero({ billing, onBillingChange }: PricingHeroProps) {
           Các gói giải pháp linh hoạt theo nhu cầu của bạn
         </h1>
         <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-300 sm:text-xl">
-          Tất cả các gói đều bao gồm file processing, video frame analysis, và
-          link transcription. Mức giá được tính dựa trên AI usage và smart
+          Tất cả các gói đều bao gồm các chức năng cốt lõi AI Policy, IP Ledger, Matching. Mức giá được tính dựa trên AI usage và smart
           storage.
         </p>
       </motion.div>

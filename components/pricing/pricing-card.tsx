@@ -11,8 +11,8 @@ import type { BillingCycle } from "@/components/pricing/pricing-hero";
 
 export interface PricingPlan {
   name: "Startup" | "Business" | "Investor";
-  monthlyPrice: number;
-  yearlyPrice: number;
+  monthlyPrice: string;
+  yearlyPrice: string;
   description: string;
   features: string[];
   recommended?: boolean;
@@ -33,7 +33,11 @@ export const pricingCardVariants: Variants = {
 };
 
 export function PricingCard({ plan, billing }: PricingCardProps) {
-  const price = billing === "yearly" ? plan.yearlyPrice : plan.monthlyPrice;
+  // Lấy ra chuỗi giá trị (VD: "4.990.000 VNĐ")
+  const priceString = billing === "yearly" ? plan.yearlyPrice : plan.monthlyPrice;
+
+  // Tách số và chữ VNĐ ra thành 2 phần
+  const [amount, currency] = priceString.split(" ");
 
   return (
     <motion.article
@@ -77,20 +81,28 @@ export function PricingCard({ plan, billing }: PricingCardProps) {
 
         <div className="mt-8">
           <div className="flex items-end gap-2">
-            <span className="pb-2 text-3xl text-zinc-400">$</span>
             <AnimatePresence mode="wait" initial={false}>
-              <motion.span
-                key={`${plan.name}-${billing}-${price}`}
-                className="inline-block text-6xl font-semibold leading-none tracking-normal text-white"
+              <motion.div
+                key={`${plan.name}-${billing}-${priceString}`}
+                className="flex items-baseline gap-1.5"
                 initial={{ opacity: 0, y: 14, filter: "blur(5px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 exit={{ opacity: 0, y: -14, filter: "blur(5px)" }}
                 transition={{ duration: 0.26, ease: "easeOut" }}
               >
-                {price}
-              </motion.span>
+                {/* Phần Số To */}
+                <span className="inline-block text-5xl font-semibold leading-none tracking-normal text-white xl:text-6xl">
+                  {amount}
+                </span>
+                {/* Phần Chữ VNĐ Nhỏ */}
+                {currency && (
+                  <span className="text-xl font-medium text-zinc-300">
+                    {currency}
+                  </span>
+                )}
+              </motion.div>
             </AnimatePresence>
-            <span className="pb-2 text-sm font-medium text-zinc-400">
+            <span className="pb-1.5 text-sm font-medium text-zinc-400">
               / tháng
             </span>
           </div>
