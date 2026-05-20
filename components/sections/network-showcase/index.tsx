@@ -80,57 +80,57 @@ export const NetworkShowcase = () => {
     return (
         <section
             aria-labelledby="network-showcase-title"
-            className="relative flex flex-col items-center overflow-hidden bg-[#0a1c13] py-24 text-white lg:py-32 border-t border-white/5"
+            className="flex relative flex-col items-center py-24 lg:py-32 bg-[#0a1c13] border-t border-white/5 text-white overflow-hidden"
         >
             {/* Background Glows Premium */}
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.15),transparent_40%)]" />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-[#0a1c13] to-[#0a1c13]"></div>
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.15),transparent_40%)]" />
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-[#0a1c13] to-[#0a1c13]"></div>
 
             {/* 1. Phần Tiêu đề (Header) - Giữ nguyên kiến trúc cũ của mày */}
-            <div className="relative z-10 mx-auto mb-12 flex w-full max-w-3xl flex-col items-center text-center px-6">
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/15 bg-emerald-400/10 px-4 py-2 text-xs uppercase tracking-[0.2em] text-emerald-300">
+            <div className="flex relative z-10 flex-col items-center px-6 mb-12 mx-auto w-full max-w-3xl text-center">
+                <div className="inline-flex items-center px-4 py-2 mb-6 gap-2 text-xs tracking-[0.2em] text-emerald-300 uppercase bg-emerald-400/10 rounded-full border border-emerald-300/15">
                     <Sparkles aria-hidden="true" className="size-3.5 animate-pulse" />
                     Mạng lưới tinh hoa
                 </div>
 
                 <h2
                     id="network-showcase-title"
-                    className="font-serif text-4xl font-medium leading-tight tracking-normal text-white md:text-5xl lg:text-6xl"
+                    className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight tracking-normal text-white"
                 >
                     Kết nối trực tiếp với những bộ óc vĩ đại nhất.
                 </h2>
 
-                <p className="mt-6 max-w-xl text-base leading-relaxed text-white/60 md:text-lg">
+                <p className="mt-6 max-w-xl text-base md:text-lg leading-relaxed text-white/60">
                     Không qua trung gian. Chốt deal và nhận cố vấn từ mạng lưới cựu sinh viên Bách Khoa và các quỹ đầu tư hàng đầu nhờ bộ máy AI Matching.
                 </p>
 
                 <Button
                     asChild
                     size="lg"
-                    className="mt-8 rounded-xl bg-white px-6 text-[#0a1c13] shadow-xl shadow-emerald-950/30 hover:bg-emerald-50 transition-all font-bold"
+                    className="px-6 mt-8 font-bold text-[#0a1c13] bg-white rounded-xl shadow-xl shadow-emerald-950/30 transition-all hover:bg-emerald-50"
                 >
                     <Link href="/signup">
                         Khám phá Mạng lưới
-                        <ArrowRight aria-hidden="true" className="size-4 ml-1" />
+                        <ArrowRight aria-hidden="true" className="ml-1 size-4" />
                     </Link>
                 </Button>
             </div>
 
             {/* 2. Phần Bộ Máy Quét AI Tương Tác - Thay thế hoàn toàn cho cái Marquee cũ */}
-            <div className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center mt-6">
+            <div className="flex relative z-10 flex-col items-center px-6 mt-6 w-full max-w-5xl">
 
                 {/* Khung Search AI Terminal */}
-                <div className="w-full max-w-2xl bg-white/5 border border-white/10 rounded-2xl p-2 backdrop-blur-md shadow-2xl mb-12 ring-1 ring-white/10 relative overflow-hidden">
-                    <div className="bg-[#05140d] border border-white/5 rounded-xl p-4 flex items-center gap-4 relative">
+                <div className="relative overflow-hidden p-2 mb-12 w-full max-w-2xl bg-white/5 rounded-2xl border border-white/10 ring-1 ring-white/10 shadow-2xl backdrop-blur-md">
+                    <div className="flex relative items-center p-4 gap-4 bg-[#05140d] rounded-xl border border-white/5">
                         {phase === "scanning" ? (
                             <ScanLine className="w-5 h-5 text-emerald-400 animate-bounce" />
                         ) : (
                             <Search className="w-5 h-5 text-zinc-500" />
                         )}
 
-                        <div className="flex-1 font-mono text-xs md:text-sm text-zinc-300 min-h-[20px] select-none">
+                        <div className="flex-1 min-h-[20px] font-mono text-xs md:text-sm text-zinc-300 select-none">
                             {displayedText}
-                            <span className="inline-block w-2 h-4 bg-emerald-500 ml-1 animate-pulse align-middle"></span>
+                            <span className="inline-block ml-1 w-2 h-4 align-middle bg-emerald-500 animate-pulse"></span>
                         </div>
 
                         {/* Tia Lazer chạy ngang khi quét */}
@@ -139,14 +139,14 @@ export const NetworkShowcase = () => {
                                 initial={{ left: "-100%" }}
                                 animate={{ left: "100%" }}
                                 transition={{ duration: 1.2, ease: "linear", repeat: Infinity }}
-                                className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent blur-sm"
+                                className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent blur-sm will-change-transform"
                             />
                         )}
                     </div>
                 </div>
 
                 {/* Khu vực hiển thị kết quả các Card size nhỏ gọn w-[15rem] */}
-                <div className="min-h-[360px] w-full relative flex items-center justify-center">
+                <div className="flex relative justify-center items-center w-full min-h-[360px]">
                     <AnimatePresence mode="wait">
                         {phase === "results" && (
                             <motion.div
@@ -154,7 +154,7 @@ export const NetworkShowcase = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="flex flex-wrap justify-center gap-6 w-full"
+                                className="flex flex-wrap justify-center w-full gap-6 will-change-transform"
                             >
                                 {currentResults.map((person) => (
                                     <motion.div
@@ -163,6 +163,7 @@ export const NetworkShowcase = () => {
                                         animate={{ opacity: 1, scale: 1, y: 0 }}
                                         exit={{ opacity: 0, scale: 0.95, y: -10 }}
                                         transition={{ duration: 0.45, ease: "easeOut" }}
+                                        className="will-change-transform"
                                     >
                                         <NetworkCard person={person} />
                                     </motion.div>
@@ -177,9 +178,9 @@ export const NetworkShowcase = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="flex flex-col items-center gap-2 text-emerald-400/70 font-mono text-xs"
+                                className="flex flex-col items-center gap-2 font-mono text-xs text-emerald-400/70 will-change-transform"
                             >
-                                <div className="w-5 h-5 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin mb-1"></div>
+                                <div className="mb-1 w-5 h-5 rounded-full border-2 border-t-transparent border-emerald-500 animate-spin"></div>
                                 <p className="tracking-wide">AI đang rà soát thông tin Nhật ký thực thi...</p>
                             </motion.div>
                         )}

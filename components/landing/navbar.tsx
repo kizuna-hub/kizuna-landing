@@ -11,7 +11,8 @@ function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
-export function Navbar() {
+// Bổ sung prop "theme" để Component nhận biết nền của trang cha
+export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -26,6 +27,9 @@ export function Navbar() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // LOGIC CỐT LÕI: Dùng chữ tối màu khi đã cuộn chuột XUỐNG, HOẶC khi đang ở trang nền SÁNG
+    const useDarkText = isScrolled || theme === "light";
 
     return (
         // Lớp ngoài cùng cố định và ôm trọn chiều ngang, pointer-events-none để không chặn click ở phần viền
@@ -47,33 +51,33 @@ export function Navbar() {
                 {/* LOGO */}
                 <div className={cn(
                     "font-bold text-xl tracking-tight flex items-center gap-1 transition-colors duration-[800ms]",
-                    isScrolled ? "text-[#102c1e]" : "text-white"
+                    useDarkText ? "text-[#102c1e]" : "text-white"
                 )}>
                     Kizuna Hub <span className="text-[#f97316]">.</span>
                 </div>
 
                 {/* LINKS Ở GIỮA */}
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <Link href="#ecosystem" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Hệ sinh thái</Link>
-                    <Link href="#security" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảo mật</Link>
-                    <Link href="#heritage" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Di sản</Link>
-                    <Link href="#pricing" className={cn("transition-colors duration-[800ms] hover:opacity-70", isScrolled ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảng giá</Link>
+                    <Link href="/ecosystem" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Hệ sinh thái</Link>
+                    <Link href="/programs" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Chương trình</Link>
+                    <Link href="/showcase" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Dự án nổi bật</Link>
+                    <Link href="/pricing" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảng giá</Link>
                 </nav>
 
                 {/* NÚT ACTION BÊN PHẢI */}
                 <div className="flex items-center gap-6">
                     <Link href="/login" className={cn(
                         "text-sm font-medium hover:opacity-70 transition-colors duration-[800ms]",
-                        isScrolled ? "text-zinc-900" : "text-white"
+                        useDarkText ? "text-zinc-900" : "text-white"
                     )}>
                         Đăng nhập
                     </Link>
 
                     <Link href="/signup" className={cn(
-                        "text-sm font-bold px-6 py-2.5 transition-all duration-[800ms]",
-                        isScrolled
-                            ? "bg-[#102c1e] text-white hover:bg-[#102c1e]/80 rounded-[8px]" // Khi cuộn, nút bấm cũng bo góc vuông vức theo Navbar
-                            : "bg-white text-[#102c1e] hover:bg-white/95 shadow-[0_0_20px_rgba(16,185,129,0.3)] rounded-[8px]"
+                        "text-sm font-bold px-6 py-2.5 transition-all duration-[800ms] rounded-[8px]",
+                        useDarkText
+                            ? "bg-[#102c1e] text-white hover:bg-[#102c1e]/80" // Nút tối màu cho nền sáng
+                            : "bg-white text-[#102c1e] hover:bg-white/95 shadow-[0_0_20px_rgba(16,185,129,0.3)]" // Nút sáng màu cho nền tối
                     )}>
                         Truy cập
                     </Link>
