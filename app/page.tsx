@@ -3,10 +3,10 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { ManifestoSection } from "@/components/landing/manifesto-section";
 import { CinematicFX } from "@/components/landing/cinematic-fx";
 import { FeaturesSection } from "@/components/landing/features-section";
-import { WhyUsingKizunaSection } from "@/components/landing/why-using-kizuna";
-import { CanvasStorySection } from "@/components/landing/canvas-story-section";
+import { WorkspaceShowcase } from "@/components/sections/workspace-showcase";
+import { NetworkShowcase } from "@/components/sections/network-showcase";
+import { CanvasConnectedGraph } from "@/components/sections/canvas-connected-graph/index";
 import { SecondaryPeek } from "@/components/landing/secondary-peek";
-import { DashboardPeek } from "@/components/landing/dashboard-peek";
 import { ExpertInsightSection } from "@/components/landing/expert-insight-section";
 import { FeaturesPage } from "./features/page";
 import { CtaSection } from "@/components/landing/cta-section";
@@ -19,9 +19,10 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <ManifestoSection />
-      {/* <CanvasStorySection /> */}
-      <FeaturesPage />
       <FeaturesSection />
+      <WorkspaceShowcase />
+      <NetworkShowcase />
+      <CanvasConnectedGraph />
       <SecondaryPeek />
       <ExpertInsightSection />
       <CtaSection />

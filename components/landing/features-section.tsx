@@ -4,23 +4,23 @@ export function FeaturesSection() {
     const features = [
         {
             icon: <FileLock className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "Sổ cái bảo vệ IP",
-            desc: "Bảo vệ lợi thế cạnh tranh của bạn với dấu thời gian (timestamping) không thể thay đổi. Chúng tôi tạo ra dấu vết tài liệu có thể xác minh cho các thuật toán và thiết kế của bạn trước khi chúng rời khỏi không gian làm việc.",
+            title: "Nhật ký thực thi dự án",
+            desc: "Chứng minh năng lực bằng dữ liệu thực tế (Traction). Ghi vết tiến độ bất biến, xóa bỏ hoàn toàn rủi ro 'faking data' (làm giả số liệu) khi gọi vốn đầu tư.",
         },
         {
             icon: <Bot className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "Trợ lý chính sách AI",
-            desc: "Nắm bắt bức tranh phức tạp về quy định công nghệ khu vực. AI của chúng tôi tự động điều chỉnh các bài thuyết trình (pitch deck) của bạn để phù hợp với Nghị định 13 và các khuôn khổ tuân thủ địa phương một cách dễ dàng.",
+            title: "AI Policy Navigator",
+            desc: "Trợ lý phân tích tài chính tự động. Hỗ trợ định giá Startup, thiết lập Bảng chia vốn (Cap Table) và xuất báo cáo Thẩm định (Due Diligence) rủi ro chỉ trong vài phút.",
         },
         {
             icon: <Users className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "Kết nối Cố vấn",
-            desc: "Nhận quyền truy cập vào mạng lưới được chọn lọc cẩn thận gồm các nhà sáng lập tiên phong (Pioneer Founders). Chúng tôi kết nối bạn với các chuyên gia dày dạn kinh nghiệm trong ngành, những người đã vượt qua thành công giai đoạn tăng trưởng mà bạn đang bước vào.",
+            title: "Sàn giao dịch Nhân tài",
+            desc: "Thuật toán AI Matching phân tích kỹ năng thực chiến. Giúp SME thâm nhập Data Pool săn lùng Tech Co-founder và kết nối Startup với các Mentor đẳng cấp.",
         },
         {
             icon: <TrendingUp className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />,
-            title: "Sẵn sàng gọi vốn VC",
-            desc: "Tạo các báo cáo dựa trên dữ liệu bằng ngôn ngữ của các nhà đầu tư. Biến các số liệu nội bộ lộn xộn thành các phòng thẩm định (diligence room) chuyên nghiệp, sạch sẽ để chốt vòng hạt giống.",
+            title: "Phễu Deal Flow độc quyền",
+            desc: "Đặc quyền dành riêng cho Investor với chiến lược phân luồng dữ liệu. Xem trước bức tranh tài chính, sắp xếp Private Pitching 1:1 và chốt deal an toàn.",
         },
     ];
 
@@ -36,15 +36,15 @@ export function FeaturesSection() {
                     </div>
 
                     <h2 className="font-serif text-4xl lg:text-[3.8rem] font-semibold text-white tracking-tighter leading-[1.1]">
-                        Chuẩn hóa ý tưởng.<br /> Bảo vệ tầm nhìn.
+                        Minh bạch hóa dữ liệu.<br /> Tối ưu hóa rót vốn.
                     </h2>
 
                     <p className="text-zinc-400 text-sm lg:text-base mt-6 max-w-sm leading-relaxed font-light">
-                        Kizuna Hub biến các ý tưởng thô sơ thành tài sản kỹ thuật số có cấu trúc và được bảo vệ pháp lý chỉ trong vài phút. Tập trung xây dựng, chúng tôi lo phần nền tảng.
+                        Kizuna Hub biến các ý tưởng thô sơ thành số liệu thực tế được chứng minh qua Nhật ký thực thi. Tự động hóa thẩm định, kết nối đúng tệp nhân tài và mở van dòng vốn an toàn.
                     </p>
 
-                    <button className="mt-8 border border-white/20 text-[14px] bg-white text-[#102c1e] font-bold px-8 py-3.5 rounded-[12px] transition-all duration-300 tracking-wide">
-                        Khám phá tất cả tính năng
+                    <button className="mt-8 border border-white/20 text-[14px] bg-white text-[#102c1e] font-bold px-8 py-3.5 rounded-[12px] transition-all duration-300 tracking-wide hover:bg-zinc-200">
+                        Khám phá hệ sinh thái
                     </button>
                 </div>
 

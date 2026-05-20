@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 
 interface DashboardPeekProps {
-    y: MotionValue<number | string>;
+    y: MotionValue<number>;
 }
 
 export function DashboardPeek({ y }: DashboardPeekProps) {
