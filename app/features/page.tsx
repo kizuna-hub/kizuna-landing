@@ -7,3 +7,5 @@ export function FeaturesPage() {
         </main>
     );
 }
+
+export default FeaturesPage;

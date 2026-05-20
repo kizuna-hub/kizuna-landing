@@ -14,9 +14,11 @@ type AuthPageProps = {
   mode: AuthMode;
 };
 
-const containerVariants = {
+const authEase: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+const containerVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95 },
-  show: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1], staggerChildren: 0.05 } },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5, ease: authEase, staggerChildren: 0.05 } },
 };
 
 const itemVariants: Variants = {
@@ -26,8 +28,7 @@ const itemVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.4,
-      // FIX ÉP KIỂU Ở ĐÂY: Thêm 'as [number, number, number, number]'
-      ease: [0.16, 1, 0.3, 1] as [number, number, number, number]
+      ease: authEase,
     },
   },
 };

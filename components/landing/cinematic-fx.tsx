@@ -1,21 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+
+interface Particle {
+    id: number;
+    left: string;
+    duration: number;
+    delay: number;
+    driftA: string;
+    driftB: string;
+}
+
+const particleValue = (index: number, salt: number) => {
+    const value = Math.sin((index + 1) * (salt + 3.7)) * 10000;
+
+    return value - Math.floor(value);
+};
+
+const particles: readonly Particle[] = Array.from({ length: 20 }, (_, index) => ({
+    id: index,
+    left: `${particleValue(index, 1) * 100}%`,
+    duration: particleValue(index, 2) * 10 + 10,
+    delay: particleValue(index, 3) * 5,
+    driftA: `${(particleValue(index, 4) - 0.5) * 100}px`,
+    driftB: `${(particleValue(index, 5) - 0.5) * 100}px`,
+}));
 
 export function CinematicFX() {
-    const [particles, setParticles] = useState<{ id: number; left: string; duration: number; delay: number }[]>([]);
-
-    useEffect(() => {
-        const generatedParticles = Array.from({ length: 20 }).map((_, i) => ({
-            id: i,
-            left: `${Math.random() * 100}%`,
-            duration: Math.random() * 10 + 10,
-            delay: Math.random() * 5,
-        }));
-        setParticles(generatedParticles);
-    }, []);
-
     return (
         <div className="fixed inset-0 pointer-events-none z-50">
             <div
@@ -33,11 +44,11 @@ export function CinematicFX() {
                         style={{ left: p.left }}
                         animate={{
                             y: ["0vh", "-110vh"],
-                            x: ["0px", `${(Math.random() - 0.5) * 100}px`, `${(Math.random() - 0.5) * 100}px`],
+                            x: ["0px", p.driftA, p.driftB],
                         }}
                         transition={{
                             y: { duration: p.duration, repeat: Infinity, ease: "linear", delay: p.delay },
-                            x: { duration: p.duration * 0.7, repeat: Infinity, ease: "easeInOut", yoyo: Infinity },
+                            x: { duration: p.duration * 0.7, repeat: Infinity, repeatType: "mirror", ease: "easeInOut" },
                         }}
                     />
                 ))}
