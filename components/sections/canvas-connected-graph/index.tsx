@@ -24,34 +24,34 @@ export const CanvasConnectedGraph = () => {
     <section
       ref={sectionRef}
       aria-labelledby="connected-graph-title"
-      className="relative overflow-hidden bg-zinc-50 px-6 py-24 text-zinc-950 sm:py-28 lg:py-36"
+      className="relative overflow-hidden px-6 py-24 sm:py-28 lg:py-36 text-zinc-950 bg-zinc-50"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(16,185,129,0.08),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.85),rgba(250,250,250,0))]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_20%,rgba(16,185,129,0.08),transparent_32%),linear-gradient(180deg,rgba(255,255,255,0.85),rgba(250,250,250,0))]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">
         {/* Header Block */}
         <div className="mx-auto max-w-3xl text-center">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 shadow-sm shadow-black/5">
+          <div className="inline-flex items-center mb-5 px-4 py-2 gap-2 text-xs font-bold tracking-[0.2em] text-emerald-700 uppercase bg-white rounded-full border border-zinc-200 shadow-sm shadow-black/5">
             <Sparkles aria-hidden="true" className="size-3.5" />
             Tri thức được kết nối
           </div>
 
-          <h2 id="connected-graph-title" className="font-serif text-4xl font-medium leading-tight text-zinc-950 md:text-6xl">
+          <h2 id="connected-graph-title" className="font-serif text-4xl md:text-6xl font-medium leading-tight text-zinc-950">
             Biến dữ liệu rời rạc thành bản đồ vận hành sống.
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-zinc-500 md:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base md:text-lg leading-8 text-zinc-500">
             Kizuna Hub gom transcript, pháp lý, mentor signal và bằng chứng thực thi vào một graph duy nhất để đội ngũ nhìn thấy bối cảnh trước khi ra quyết định.
           </p>
         </div>
 
         {/* Graph Canvas Workspace */}
-        <div className="relative mt-14 h-[680px] overflow-hidden rounded-[2rem] border border-zinc-200 bg-zinc-50 shadow-inner shadow-black/[0.03] sm:h-[760px] lg:h-[820px]">
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(24,24,27,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(24,24,27,0.045)_1px,transparent_1px)] bg-[size:48px_48px]" />
+        <div className="relative overflow-hidden mt-14 h-[680px] sm:h-[760px] lg:h-[820px] bg-zinc-50 rounded-[2rem] border border-zinc-200 shadow-inner shadow-black/[0.03]">
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(24,24,27,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(24,24,27,0.045)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
           {/* SVG Canvas Vector Layer */}
           <svg
-            className="pointer-events-none absolute inset-0 z-0 h-full w-full"
+            className="absolute inset-0 z-0 pointer-events-none w-full h-full"
             viewBox="0 0 1000 620"
             preserveAspectRatio="none"
             role="presentation"

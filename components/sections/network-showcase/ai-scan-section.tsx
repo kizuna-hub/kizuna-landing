@@ -76,35 +76,35 @@ export function AIScanSection() {
     const currentResults = searchScenarios[currentScenario]?.results || [];
 
     return (
-        <section className="relative py-28 bg-[#102c1e] overflow-hidden w-full flex flex-col items-center justify-center min-h-[85vh] border-t border-white/5">
+        <section className="flex relative flex-col justify-center items-center py-28 w-full min-h-[85vh] bg-[#102c1e] border-t border-white/5 overflow-hidden">
 
             {/* Background Radial Glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-950/40 via-[#102c1e] to-[#102c1e] pointer-events-none"></div>
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-950/40 via-[#102c1e] to-[#102c1e]"></div>
 
-            <div className="relative z-10 w-full max-w-5xl px-6 flex flex-col items-center">
+            <div className="flex relative z-10 flex-col items-center px-6 w-full max-w-5xl">
 
                 {/* Header */}
-                <div className="text-center mb-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-[10px] text-emerald-400 font-bold uppercase tracking-[0.2em] mb-4">
+                <div className="mb-10 text-center">
+                    <div className="inline-flex items-center px-3 py-1 mb-4 gap-2 text-[10px] font-bold tracking-[0.2em] text-emerald-400 uppercase bg-emerald-500/10 rounded-full border border-emerald-500/20">
                         <Sparkles className="w-3 h-3 animate-pulse" /> AI Matching Engine
                     </div>
-                    <h2 className="text-3xl md:text-5xl font-serif font-medium text-white tracking-tight leading-tight">
+                    <h2 className="font-serif text-3xl md:text-5xl font-medium leading-tight tracking-tight text-white">
                         Thuật toán Tìm kiếm Tinh hoa
                     </h2>
                 </div>
 
                 {/* AI Terminal Search Bar */}
-                <div className="w-full max-w-2xl bg-zinc-900/40 border border-white/10 rounded-2xl p-2 backdrop-blur-md shadow-2xl mb-10 relative overflow-hidden">
-                    <div className="bg-[#0b1d14] border border-white/5 rounded-xl p-4 flex items-center gap-4 relative">
+                <div className="relative overflow-hidden p-2 mb-10 w-full max-w-2xl bg-zinc-900/40 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-md">
+                    <div className="flex relative items-center p-4 gap-4 bg-[#0b1d14] rounded-xl border border-white/5">
                         {phase === "scanning" ? (
                             <ScanLine className="w-5 h-5 text-emerald-400 animate-bounce" />
                         ) : (
                             <Search className="w-5 h-5 text-zinc-500" />
                         )}
 
-                        <div className="flex-1 font-mono text-xs md:text-sm text-zinc-200 min-h-[20px] select-none">
+                        <div className="flex-1 min-h-[20px] font-mono text-xs md:text-sm text-zinc-200 select-none">
                             {displayedText}
-                            <span className="inline-block w-2 h-4 bg-emerald-500 ml-1 animate-pulse align-middle"></span>
+                            <span className="inline-block ml-1 w-2 h-4 align-middle bg-emerald-500 animate-pulse"></span>
                         </div>
 
                         {/* Tia Lazer quét ngang */}
@@ -113,14 +113,14 @@ export function AIScanSection() {
                                 initial={{ left: "-100%" }}
                                 animate={{ left: "100%" }}
                                 transition={{ duration: 1.2, ease: "linear", repeat: Infinity }}
-                                className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent blur-sm"
+                                className="absolute top-0 bottom-0 w-1/4 bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent blur-sm will-change-transform"
                             />
                         )}
                     </div>
                 </div>
 
                 {/* Container render động các Card kết quả */}
-                <div className="min-h-[380px] w-full relative flex items-center justify-center">
+                <div className="flex relative justify-center items-center w-full min-h-[380px]">
                     <AnimatePresence mode="wait">
                         {phase === "results" && (
                             <motion.div
@@ -128,7 +128,7 @@ export function AIScanSection() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="flex flex-wrap justify-center gap-6 w-full"
+                                className="flex flex-wrap justify-center w-full gap-6 will-change-transform"
                             >
                                 {currentResults.map((person) => (
                                     <motion.div
@@ -137,6 +137,7 @@ export function AIScanSection() {
                                         animate={{ opacity: 1, scale: 1, y: 0 }}
                                         exit={{ opacity: 0, scale: 0.95, y: -10 }}
                                         transition={{ duration: 0.45, ease: "easeOut" }}
+                                        className="will-change-transform"
                                     >
                                         <NetworkCard person={person} />
                                     </motion.div>
@@ -151,9 +152,9 @@ export function AIScanSection() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="flex flex-col items-center gap-2 text-emerald-400/70 font-mono text-xs"
+                                className="flex flex-col items-center gap-2 font-mono text-xs text-emerald-400/70 will-change-transform"
                             >
-                                <div className="w-6 h-6 border-2 border-emerald-500 border-t-transparent rounded-full animate-spin mb-1"></div>
+                                <div className="mb-1 w-6 h-6 rounded-full border-2 border-t-transparent border-emerald-500 animate-spin"></div>
                                 <p className="tracking-wide">Đang rà soát Nhật ký thực thi [Data Pool]...</p>
                             </motion.div>
                         )}

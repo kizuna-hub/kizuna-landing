@@ -31,3 +31,16 @@
 - **Modular Output:** Do not dump 300 lines of code into one file. Split into logical sub-components (Data, UI, Layout).
 - **Skill Delegation:** If tasked with a complex animation, implicitly refer to `front-animations.md` logic. If tasked with DB operations, implicitly refer to `db-integration.md`.
 - **Stop & Ask:** If a requirement is ambiguous or contradicts these core rules, STOP generating code and ask the user for clarification.
+
+## 6. CRITICAL: DESIGN TOKENS & STYLING SOURCE OF TRUTH
+
+Before writing, modifying, or suggesting any UI components, you MUST read and analyze `app/globals.css` (and `tailwind.config.ts` if available) to understand the project's Design Tokens. 
+
+**Strict Styling Rules:**
+1. **Mandatory File Reading:** You must extract the color palette, typography, and utility classes directly from `app/globals.css`. 
+2. **No Arbitrary Colors:** It is STRICTLY PROHIBITED to use arbitrary or hardcoded hex/RGB values in Tailwind classes (e.g., `text-[#123456]` or `bg-[#ff0000]`) unless explicitly requested. 
+3. **Use CSS Variables:** You must exclusively utilize the CSS variables defined in our globals (e.g., `--background`, `--primary-green`, `--accent-amber`).
+4. **Tailwind Integration:** Prioritize using the configured Tailwind utility classes that map to our CSS variables (e.g., `bg-background`, `text-primary`, `text-accent`). 
+5. **Brand Consistency:** Maintain Kizuna Hub's cinematic "Warm Dark Amber" aesthetic. Ensure high contrast and accessibility (WCAG standards) when applying text over dark or gradient backgrounds.
+
+Failure to adhere to these design tokens will result in UI inconsistency and is considered a critical error.

@@ -13,6 +13,9 @@ export const GraphEdgePath = ({ edge, lineOpacity, linePathLength }: GraphEdgePa
     const from = getNodeById(graphNodes, edge.from);
     const to = getNodeById(graphNodes, edge.to);
 
+    // Bouncer Pattern: Early Return
+    if (!from || !to) return null;
+
     return (
         <motion.path
             aria-hidden="true"
@@ -22,6 +25,7 @@ export const GraphEdgePath = ({ edge, lineOpacity, linePathLength }: GraphEdgePa
             strokeWidth="2"
             strokeLinecap="round"
             strokeDasharray="7 9"
+            className="will-change-auto"
             // Áp trực tiếp hai MotionValue truyền từ file Index chính vào style
             style={{ opacity: lineOpacity, pathLength: linePathLength }}
         />
