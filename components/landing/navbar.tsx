@@ -49,29 +49,32 @@ export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
                 )}
             >
                 {/* LOGO */}
-                <div className={cn(
-                    "font-bold text-xl tracking-tight flex items-center gap-1 transition-colors duration-[800ms]",
-                    useDarkText ? "text-[#102c1e]" : "text-white"
-                )}>
-                    Kizuna Hub <span className="text-[#f97316]">.</span>
-                </div>
+                <Link
+                    href="/"
+                    className={cn(
+                        "font-bold text-xl tracking-tight flex items-center gap-1 transition-colors duration-[800ms]",
+                        useDarkText ? "text-[#102c1e]" : "text-white"
+                    )}
+                >
+                    Kizuna Hub
+                </Link>
 
                 {/* LINKS Ở GIỮA */}
                 <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
                     <Link href="/ecosystem" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Hệ sinh thái</Link>
-                    <Link href="/programs" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Chương trình</Link>
-                    <Link href="/showcase" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Dự án nổi bật</Link>
+                    <Link href="/project" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Dự án</Link>
                     <Link href="/pricing" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảng giá</Link>
+                    <Link href="/about-us" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Về chúng tôi</Link>
                 </nav>
 
                 {/* NÚT ACTION BÊN PHẢI */}
                 <div className="flex items-center gap-6">
-                    <Link href="/login" className={cn(
+                    {/* <Link href="/login" className={cn(
                         "text-sm font-medium hover:opacity-70 transition-colors duration-[800ms]",
                         useDarkText ? "text-zinc-900" : "text-white"
                     )}>
                         Đăng nhập
-                    </Link>
+                    </Link> */}
 
                     <Link href="/signup" className={cn(
                         "text-sm font-bold px-6 py-2.5 transition-all duration-[800ms] rounded-[8px]",

@@ -88,7 +88,7 @@ export const NetworkShowcase = () => {
 
             {/* 1. Phần Tiêu đề (Header) - Giữ nguyên kiến trúc cũ của mày */}
             <div className="flex relative z-10 flex-col items-center px-6 mb-12 mx-auto w-full max-w-3xl text-center">
-                <div className="inline-flex items-center px-4 py-2 mb-6 gap-2 text-xs tracking-[0.2em] text-emerald-300 uppercase bg-emerald-400/10 rounded-full border border-emerald-300/15">
+                <div className="inline-flex items-center px-4 py-2 mb-6 gap-2 text-xs tracking-[0.2em] text-white uppercase bg-emerald-400/10 rounded-full border border-emerald-300/15">
                     <Sparkles aria-hidden="true" className="size-3.5 animate-pulse" />
                     Mạng lưới tinh hoa
                 </div>
@@ -123,14 +123,14 @@ export const NetworkShowcase = () => {
                 <div className="relative overflow-hidden p-2 mb-12 w-full max-w-2xl bg-white/5 rounded-2xl border border-white/10 ring-1 ring-white/10 shadow-2xl backdrop-blur-md">
                     <div className="flex relative items-center p-4 gap-4 bg-[#05140d] rounded-xl border border-white/5">
                         {phase === "scanning" ? (
-                            <ScanLine className="w-5 h-5 text-emerald-400 animate-bounce" />
+                            <ScanLine className="w-5 h-5 text-white animate-bounce" />
                         ) : (
                             <Search className="w-5 h-5 text-zinc-500" />
                         )}
 
                         <div className="flex-1 min-h-[20px] font-mono text-xs md:text-sm text-zinc-300 select-none">
                             {displayedText}
-                            <span className="inline-block ml-1 w-2 h-4 align-middle bg-emerald-500 animate-pulse"></span>
+                            <span className="inline-block ml-1 w-2 h-4 align-middle bg-white animate-pulse"></span>
                         </div>
 
                         {/* Tia Lazer chạy ngang khi quét */}
@@ -178,10 +178,10 @@ export const NetworkShowcase = () => {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="flex flex-col items-center gap-2 font-mono text-xs text-emerald-400/70 will-change-transform"
+                                className="flex flex-col items-center gap-2 font-mono text-xs text-white will-change-transform"
                             >
-                                <div className="mb-1 w-5 h-5 rounded-full border-2 border-t-transparent border-emerald-500 animate-spin"></div>
-                                <p className="tracking-wide">AI đang rà soát thông tin Nhật ký thực thi...</p>
+                                <div className="mb-1 w-5 h-5 rounded-full border-2 border-t-transparent border-white animate-spin"></div>
+                                <p className="tracking-wide text-white">AI đang rà soát thông tin Nhật ký thực thi...</p>
                             </motion.div>
                         )}
                     </AnimatePresence>

@@ -23,7 +23,7 @@ export default function Home() {
       <WorkspaceShowcase />
       <NetworkShowcase />
       <CanvasConnectedGraph />
-      <SecondaryPeek />
+      {/* <SecondaryPeek /> */}
       <ExpertInsightSection />
       <CtaSection />
       <Footer />

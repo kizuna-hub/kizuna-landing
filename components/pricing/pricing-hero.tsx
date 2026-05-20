@@ -20,11 +20,6 @@ export function PricingHero({ billing, onBillingChange }: PricingHeroProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.72, ease: "easeOut" }}
       >
-        <div className="mb-8 flex items-center gap-2 text-lg font-bold tracking-tight text-white">
-          Kizuna Hub
-          <span className="size-1.5 rounded-full bg-[#fb923c]" aria-hidden="true" />
-        </div>
-
         <h1 className="font-[var(--font-serif)] text-5xl leading-[0.96] tracking-normal text-white sm:text-6xl lg:text-8xl">
           Các gói giải pháp linh hoạt theo nhu cầu của bạn
         </h1>
