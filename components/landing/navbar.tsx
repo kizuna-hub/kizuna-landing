@@ -6,12 +6,10 @@ import Link from "next/link";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-// Hàm tiện ích để gộp class Tailwind mượt mà
 function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
-// Bổ sung prop "theme" để Component nhận biết nền của trang cha
 export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -28,56 +26,55 @@ export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // LOGIC CỐT LÕI: Dùng chữ tối màu khi đã cuộn chuột XUỐNG, HOẶC khi đang ở trang nền SÁNG
     const useDarkText = isScrolled || theme === "light";
 
     return (
-        // Lớp ngoài cùng cố định và ôm trọn chiều ngang, pointer-events-none để không chặn click ở phần viền
         <motion.header
-            className="fixed top-0 inset-x-0 z-50 flex justify-center pointer-events-none"
+            className={cn(
+                "fixed top-0 inset-x-0 z-50 flex justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
+                // XÓA BỎ BORDER: Chỉ giữ lại khối màu nền đặc #081810
+                !isScrolled && theme === "dark"
+                    ? "bg-[#081810]"
+                    : "pointer-events-none"
+            )}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} // Hiệu ứng lúc mới load trang
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-            {/* Lớp bên trong: Đây mới là cái khung Navbar thực sự sẽ co giãn */}
             <div
                 className={cn(
-                    "pointer-events-auto flex items-center justify-between transition-all duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)]",
+                    "pointer-events-auto flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
                     isScrolled
-                        ? "w-[70%] max-w-3xl mt-3 bg-white/95 backdrop-blur-xl rounded-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.1)] px-2.5 py-2 border border-zinc-200/50" // SCROLLED: Thu gọn, bo góc 24px (vừa phải)
-                        : "w-full max-w-7xl mt-0 bg-transparent px-5 py-4 rounded-[12px] border-transparent" // TOP: Rộng bằng nội dung web (max-w-7xl), không bám sát mép màn hình
+                        ? "w-[90%] max-w-4xl mt-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] px-4 py-3" // Pill trắng khi cuộn (xóa border thừa)
+                        : "w-full max-w-7xl mt-0 bg-transparent px-6 py-5 shadow-none" // Hòa vào khối màu nền header
                 )}
             >
                 {/* LOGO */}
-                <div className={cn(
-                    "font-bold text-xl tracking-tight flex items-center gap-1 transition-colors duration-[800ms]",
-                    useDarkText ? "text-[#102c1e]" : "text-white"
-                )}>
-                    Kizuna Hub <span className="text-[#f97316]">.</span>
-                </div>
+                <Link
+                    href="/"
+                    className={cn(
+                        "font-serif font-bold text-2xl tracking-tight flex items-center gap-1 transition-colors duration-500",
+                        useDarkText ? "text-[#102c1e]" : "text-white"
+                    )}
+                >
+                    Kizuna Hub
+                </Link>
 
                 {/* LINKS Ở GIỮA */}
-                <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <Link href="/ecosystem" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Hệ sinh thái</Link>
-                    <Link href="/programs" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Chương trình</Link>
-                    <Link href="/showcase" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Dự án nổi bật</Link>
-                    <Link href="/pricing" className={cn("transition-colors duration-[800ms] hover:opacity-70", useDarkText ? "text-zinc-600 hover:text-black" : "text-zinc-300 hover:text-white")}>Bảng giá</Link>
+                <nav className="hidden md:flex items-center gap-10 text-sm font-semibold">
+                    <Link href="/ecosystem" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Hệ sinh thái</Link>
+                    <Link href="/project" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Dự án</Link>
+                    <Link href="/pricing" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Bảng giá</Link>
+                    <Link href="/about-us" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Về chúng tôi</Link>
                 </nav>
 
                 {/* NÚT ACTION BÊN PHẢI */}
                 <div className="flex items-center gap-6">
-                    <Link href="/login" className={cn(
-                        "text-sm font-medium hover:opacity-70 transition-colors duration-[800ms]",
-                        useDarkText ? "text-zinc-900" : "text-white"
-                    )}>
-                        Đăng nhập
-                    </Link>
-
                     <Link href="/signup" className={cn(
-                        "text-sm font-bold px-6 py-2.5 transition-all duration-[800ms] rounded-[8px]",
+                        "text-sm font-bold px-6 py-2.5 transition-all duration-500 rounded-lg",
                         useDarkText
-                            ? "bg-[#102c1e] text-white hover:bg-[#102c1e]/80" // Nút tối màu cho nền sáng
-                            : "bg-white text-[#102c1e] hover:bg-white/95 shadow-[0_0_20px_rgba(16,185,129,0.3)]" // Nút sáng màu cho nền tối
+                            ? "bg-[#102c1e] text-white hover:bg-slate-800"
+                            : "bg-white text-[#102c1e] hover:bg-white/90 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
                     )}>
                         Truy cập
                     </Link>

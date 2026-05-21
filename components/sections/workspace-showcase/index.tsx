@@ -8,7 +8,7 @@ import { WorkspaceMockup } from "./workspace-mockup";
 export const WorkspaceShowcase = () => {
     return (
         // 1. Chuyển toàn bộ nền section sang Màu Trắng tinh khôi
-        <section className="relative overflow-hidden px-6 py-24 lg:py-32 text-zinc-900 bg-white">
+        <section className="relative overflow-hidden px-10 py-24 lg:py-32 text-zinc-900 bg-white">
             {/* Khối cực quang mờ siêu nhẹ cho nền trắng */}
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.04),transparent_50%)]" />
 
@@ -35,13 +35,13 @@ export const WorkspaceShowcase = () => {
                                 )}
                             >
                                 {/* Chữ định danh nhỏ phía trên màu xanh emerald đậm đà */}
-                                <p className="text-xs font-bold tracking-widest text-emerald-600 uppercase">
+                                <p className="text-xs font-bold tracking-widest text-kizuna-primary uppercase">
                                     {feature.eyebrow}
                                 </p>
 
                                 {/* Tiêu đề Serif to, rõ ràng, màu Xanh chủ đạo sâu thẳm #0a1c13 */}
-                                <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-medium leading-tight text-[#0a1c13]">
-                                    {feature.title} <span className="text-emerald-500">{feature.highlight}</span>
+                                <h2 className="mt-4 font-serif text-3xl sm:text-4xl lg:text-[2.75rem] font-medium leading-tight text-kizuna-primary">
+                                    {feature.title} <span className="text-emerald-700">{feature.highlight}</span>
                                 </h2>
 
                                 {/* Mô tả chi tiết màu xám Zinc-600 có độ tương phản cao, tăng size lên text-base */}

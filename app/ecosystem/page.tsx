@@ -2,6 +2,9 @@ import { Navbar } from "@/components/landing/navbar";
 import { EcosystemHero } from "@/components/ecosystem";
 import { EcosystemCarousel } from "@/components/ecosystem/sections/carousel";
 import { EcosystemValueLoop } from "@/components/ecosystem/sections/value-loop/index";
+import { EcosystemMetrics } from "@/components/ecosystem/sections/metrics";
+import { EcosystemCTA } from "@/components/ecosystem/sections/cta";
+import { Footer } from "@/components/landing/footer";
 
 export default function EcosystemPage() {
     return (
@@ -18,6 +21,12 @@ export default function EcosystemPage() {
 
             {/* 4. Value Loop Section */}
             <EcosystemValueLoop />
+
+            <EcosystemMetrics />
+
+            <EcosystemCTA />
+
+            <Footer />
         </main>
     );
 }

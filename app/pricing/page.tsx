@@ -15,6 +15,8 @@ import {
   type ComparisonSection,
 } from "@/components/pricing/comparison-table";
 
+import { Navbar } from "@/components/landing/navbar";
+
 // LƯU Ý CHO NGỌC: Đảm bảo type của monthlyPrice và yearlyPrice trong 
 // "@/components/pricing/pricing-card" là `string` nhé!
 const plans: PricingPlan[] = [
@@ -143,6 +145,7 @@ export default function PricingPage() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-white">
+      <Navbar/>
       <div className="bg-[#102c1e] text-white">
         <PricingHero billing={billing} onBillingChange={setBilling} />
         <PricingSection plans={plans} billing={billing} />
