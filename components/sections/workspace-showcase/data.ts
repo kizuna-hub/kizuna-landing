@@ -7,54 +7,60 @@ export interface WorkspaceFeature {
 
 export const workspaceFeatures: readonly WorkspaceFeature[] = [
     {
-        eyebrow: "01 • WORKSPACE",
+        eyebrow: "01 • EXECUTION LEDGER",
         title: "Không gian làm việc",
-        highlight: "khép kín.",
-        desc: "Nơi tập trung quản lý task, tiến độ và tài liệu startup. Mọi hoạt động của team đều được ghi nhận làm cơ sở dữ liệu minh bạch cho các vòng gọi vốn.",
+        highlight: "minh bạch.",
+        desc: "Không chỉ là quản lý task. Mọi dòng code commit, mọi quyết định sản phẩm đều được đồng bộ thời gian thực thành 'Nhật ký thực thi' – bằng chứng thép cho năng lực của team trước các nhà đầu tư.",
     },
     {
-        eyebrow: "02 • LEGAL & COMPLIANCE",
-        title: "Tuân thủ pháp lý bằng",
-        highlight: "một click.",
-        desc: "Tự động hóa thiết lập Bảng chia vốn (Cap Table) chuẩn quốc tế. Trợ lý AI sẽ rà soát và vẽ ra lộ trình an toàn nhất để startup của bạn tuân thủ mọi chính sách.",
+        eyebrow: "02 • CAP TABLE OS",
+        title: "Cấu trúc cổ phần",
+        highlight: "chuẩn quốc tế.",
+        desc: "Tự động hóa việc phân chia mồ hôi công sức (Sweat Equity) và định hình Bảng vốn (Cap Table) ngay từ ngày đầu. Trợ lý AI sẽ cảnh báo sớm các rủi ro pháp lý để Founder yên tâm build product.",
     },
     {
-        eyebrow: "03 • AI MATCHING",
+        eyebrow: "03 • AGENTIC MATCHING",
         title: "Tìm kiếm mảnh ghép",
         highlight: "hoàn hảo.",
-        desc: "Thuật toán AI phân tích sâu kỹ năng, định hướng và dữ liệu thực thi để đề xuất những Tech Co-founder hoặc Mentor phù hợp nhất với tầm nhìn của bạn.",
+        desc: "Thuật toán AI phân tích sâu từ Tech Stack (Next.js, AI,...) đến tư duy kinh doanh để kết nối chính xác những Co-founder còn thiếu hoặc Mentor phù hợp nhất với giai đoạn của dự án.",
     },
     {
-        eyebrow: "04 • VERIFICATION",
+        eyebrow: "04 • MENTOR NETWORK",
         title: "Hồ sơ năng lực được",
         highlight: "xác thực.",
-        desc: "Truy cập kho dữ liệu minh bạch về lịch sử cố vấn, tỷ lệ thành công và các dự án đã đồng hành. Đảm bảo mọi kết nối trên mạng lưới đều chất lượng.",
+        desc: "Loại bỏ hoàn toàn 'chuyên gia rởm'. Hệ thống theo dõi lịch sử tư vấn, tỷ lệ dự án gọi vốn thành công và đánh giá thực tế từ các Founder đi trước để đảm bảo chất lượng mạng lưới.",
     },
     {
-        eyebrow: "05 • DUE DILIGENCE",
+        eyebrow: "05 • DEAL-FLOW RADAR",
         title: "Ra quyết định từ",
         highlight: "dữ liệu thật.",
-        desc: "Truy cập độc quyền vào Phễu Deal Flow. Theo dõi Execution Ledger của startup theo thời gian thực và tự động xuất Báo cáo Thẩm định Rủi ro chỉ trong vài phút.",
+        desc: "Dành riêng cho Nhà đầu tư thiên thần và Quỹ. Trực tiếp theo dõi sức khỏe dự án qua dashboard, tự động xuất báo cáo Due Diligence chỉ trong 12 giây thay vì mất hàng tuần rà soát.",
     },
 ] as const;
 
 export const mockupTitles = [
-    "Founder OS",
-    "Policy Console",
-    "Matching Graph",
+    "Execution Dashboard",
+    "Equity & Compliance",
+    "AI Matching Graph",
     "Verified Profile",
     "Investor Diligence",
 ] as const;
 
 export const mockupMetrics = [
-    ["84%", "Task health", "12", "Docs logged"],
-    ["100%", "Cap table", "7", "Policy checks"],
-    ["93", "Match score", "18", "Candidates"],
-    ["4.9", "Trust rating", "36", "Sessions"],
-    ["5", "Live deals", "8m", "Risk report"],
+    ["98%", "System Sync", "2.4k", "Events Logged"],
+    ["100%", "Equity Verified", "4", "Core Founders"],
+    ["96", "Match Score", "Next.js", "Core Tech"],
+    ["4.9", "Trust Rating", "12", "Startups Scaled"],
+    ["$50k", "Seed Ticket", "12s", "Risk Audit"],
 ] as const;
 
-export const barHeightClassNames = ["h-[46%]", "h-[68%]", "h-[54%]", "h-[82%]", "h-[64%]"] as const;
+export const barHeightClassNames = [
+    "h-[46%]",
+    "h-[68%]",
+    "h-[54%]",
+    "h-[82%]",
+    "h-[64%]"
+] as const;
 
 export const viewportConfig = {
     once: true,

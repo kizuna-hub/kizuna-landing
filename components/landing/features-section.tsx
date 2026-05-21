@@ -26,7 +26,7 @@ export function FeaturesSection() {
 
     return (
         /* Giảm pb-64 xuống pb-32 vì không còn cái card 800px ở dưới nữa */
-        <section className="relative min-h-[80vh] bg-[#102c1e] flex flex-col justify-center pt-32 pb-32 z-10 overflow-hidden">
+        <section className="relative min-h-[80vh] bg-kizuna-primary flex flex-col justify-center pt-32 pb-32 z-10 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
                 {/* Left Column - Chiếm 6 cột */}

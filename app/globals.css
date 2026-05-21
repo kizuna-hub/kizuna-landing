@@ -127,12 +127,14 @@
 
 @layer base {
   :root {
-    --kz-forest-950: 150 51% 7%;
-    --kz-forest-900: 150 48% 9%;
+    --kz-forest-950: 150 50% 6%;
+    /* #081810 */
+    --kz-forest-900: 150 48% 7%;
+    /* #0a1c13 - MÀU KIZUNA PRIMARY CHUẨN CỦA MÀY */
     --kz-forest-850: 150 47% 12%;
-    --kz-forest-800: 150 42% 15%;
+    --kz-forest-800: 146 52% 18%;
+    /* Nửa dưới ảnh */
     --kz-forest-700: 149 37% 21%;
-    --kz-forest-600: 148 33% 28%;
     --kz-emerald-600: 142 76% 36%;
     --kz-emerald-500: 142 71% 45%;
     --kz-emerald-400: 142 69% 58%;
@@ -196,7 +198,8 @@
     --sidebar-accent-foreground: hsl(var(--kz-forest-900));
     --sidebar-border: hsl(var(--kz-zinc-200));
     --sidebar-ring: hsl(var(--kz-emerald-500));
-    --kizuna-primary: hsl(var(--kz-forest-800));
+    --kizuna-primary: hsl(var(--kz-forest-900));
+    /* Chữ/Nút ăn màu đen tuyền #0a1c13 */
     --kizuna-canvas: hsl(var(--kz-white));
     --kizuna-surface: hsl(var(--kz-canvas-50));
     --kizuna-text-main: hsl(var(--kz-zinc-900));

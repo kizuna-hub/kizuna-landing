@@ -11,6 +11,7 @@ import { ExpertInsightSection } from "@/components/landing/expert-insight-sectio
 import { FeaturesPage } from "./features/page";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Footer } from "@/components/landing/footer";
+import { FAQSection } from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <CanvasConnectedGraph />
       {/* <SecondaryPeek /> */}
       <ExpertInsightSection />
+      <FAQSection />
       <CtaSection />
       <Footer />
     </main>
