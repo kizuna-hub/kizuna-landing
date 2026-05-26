@@ -70,14 +70,14 @@ export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
 
                 {/* NÚT ACTION BÊN PHẢI */}
                 <div className="flex items-center gap-6">
-                    <Link href="/signup" className={cn(
+                    <a href="https://kizuna-swart.vercel.app/vi/auth/login" className={cn(
                         "text-sm font-bold px-6 py-2.5 transition-all duration-500 rounded-lg",
                         useDarkText
                             ? "bg-[#102c1e] text-white hover:bg-slate-800"
                             : "bg-white text-[#102c1e] hover:bg-white/90 shadow-[0_0_20px_rgba(255,255,255,0.15)]"
                     )}>
                         Truy cập
-                    </Link>
+                    </a>
                 </div>
             </div>
         </motion.header>
