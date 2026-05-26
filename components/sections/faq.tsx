@@ -20,11 +20,11 @@ const FAQ_DATA = [
     },
     {
         question: "Kizuna Hub có thu phí hoa hồng (Success Fee) khi gọi vốn thành công không?",
-        answer: "Hoàn toàn KHÔNG. Để triệt tiêu rủi ro rò rỉ giao dịch ngầm, Kizuna Hub không thu phí hoa hồng. Chúng tôi miễn phí 100% cho sinh viên và chỉ thu doanh thu từ việc bán gói phần mềm (SaaS Subscription) cho các Vườn ươm và Doanh nghiệp cần công cụ quản trị danh mục đầu tư."
+        answer: "Hoàn toàn KHÔNG. Để triệt tiêu rủi ro rò rỉ giao dịch ngầm, Kizuna Hub không thu phí hoa hồng. Chúng tôi tạo doanh thu từ việc bán gói phần mềm (SaaS Subscription) cho các Startup nếu muốn dự án nhận được bảo chứng từ Mentor và Investor cần công cụ quản trị danh mục đầu tư."
     },
     {
         question: "Hệ thống giám sát dự án (Incubation Progress) hoạt động ra sao?",
-        answer: "Mọi cột mốc (Milestones, KPI) trong quá trình Founder làm việc với Mentor đều được cập nhật real-time. Hệ thống này có tính 'khóa chặt' (Vendor Lock-in), buộc cả Nhà đầu tư và Startup vẫn phải dùng Kizuna Hub như một công cụ CRM để theo dõi sức khỏe dự án ngay cả khi đã chốt deal."
+        answer: "Mọi cột mốc (Milestones, KPI) trong quá trình Founder làm việc với Mentor đều được cập nhật real-time. Hệ thống này có tính 'khóa chặt', buộc cả Nhà đầu tư và Startup vẫn phải dùng Kizuna Hub như một công cụ CRM để theo dõi dự án ngay cả khi đã chốt deal."
     }
 ];
 
