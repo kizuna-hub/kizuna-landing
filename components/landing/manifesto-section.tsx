@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 export function ManifestoSection() {
     // Tách các đoạn văn ra thành mảng để dễ dàng map() và gắn hiệu ứng cho từng câu một
     const paragraphs = [
-        "Tất cả chúng ta đều có lúc bế tắc.",
-        "Cấu trúc bảng vốn. Bảo vệ IP. Gọi vốn vòng hạt giống.",
-        "Chúng ta đăng ký những công cụ chung chung được cho là giúp ích, nhưng chúng chỉ để lại cho ta nhiều thứ phải lập kế hoạch và gánh vác hơn.",
-        "Ý tưởng của chúng ta rơi vào khoảng không, hoặc nỗi sợ bị đánh cắp ý tưởng khiến việc tiến bước trở nên khó khăn.",
-        "Có một nơi phù hợp để xác thực, bảo vệ và mở rộng Startup của bạn là điều vô giá."
+        "Bất kỳ Founder nào cũng từng trải qua cảm giác bế tắc.",
+        "Cấu trúc bảng vốn lỏng lẻo. Hay chật vật gõ cửa từng quỹ đầu tư vòng Seed.",
+        "Chúng ta tìm đến những phần mềm quản lý rời rạc, để rồi tự trói mình trong mớ bòng bong của những quy trình thủ công và dữ liệu phân mảnh.",
+        "Hàng ngàn dòng code và ý tưởng đột phá bị cất vào ngăn kéo, chết yểu chỉ vì thiếu đi một workspace và mentor phù hợp.",
+        "Sở hữu một hệ sinh thái khép kín để xác thực ý tưởng, và gọi vốn thành công không chỉ là lợi thế. Đó là đặc quyền sống còn."
     ];
 
     return (

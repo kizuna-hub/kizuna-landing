@@ -32,8 +32,9 @@ export function HeroSection() {
             {/* Content: Tăng padding bottom để tạo "đất" cho cái ảnh trượt lên mà ko đè chữ */}
             <div className="relative z-10 flex flex-col items-center justify-center min-h-[90vh] pt-32 pb-20 px-4 w-full">
                 <h1 className="text-5xl md:text-7xl font-bold text-white text-center tracking-tighter max-w-5xl leading-[1.1]">
-                    Bệ phóng <br />
-                    <span className="text-emerald-400 italic font-serif">Bảo vệ</span> Startup của bạn.
+                    Nền tảng kết nối
+                    <span className="text-emerald-600 hover:text-emerald-400 italic font-serif"> Nhân tài</span> & <br />
+                    <span className="text-emerald-600 hover:text-emerald-400 italic font-serif">Ươm mầm</span> Khởi nghiệp
                 </h1>
 
                 <p className="text-emerald-50/70 max-w-2xl text-center mt-8 text-lg md:text-xl leading-relaxed">
