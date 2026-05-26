@@ -4,27 +4,27 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
-// Dữ liệu mẫu chuẩn bối cảnh Kizuna Hub
+// Dữ liệu mẫu đã được UPDATE theo chuẩn chiến lược Pitch Deck & Mô hình SaaS
 const FAQ_DATA = [
     {
-        question: "Kizuna Hub khác biệt thế nào so với các nền tảng ươm tạo khác?",
-        answer: "Kizuna Hub không chỉ cung cấp khóa học hay lý thuyết. Chúng tôi là một hệ sinh thái cộng sinh (Value Loop) kết nối trực tiếp Founder (sinh viên), Mentor (chuyên gia) và Investor (nhà đầu tư) thông qua các công cụ quản lý dự án thực chiến và dữ liệu minh bạch."
+        question: "Kizuna Hub khác biệt thế nào so với các nền tảng ươm tạo truyền thống?",
+        answer: "Thay vì chỉ kết nối (matching) lỏng lẻo, Kizuna Hub là một nền tảng SaaS quản trị toàn diện. Chúng tôi sử dụng 'AI Gatekeeper' để chuẩn hóa dự án ngay từ đầu, và cung cấp hạ tầng đồng bộ tiến độ thời gian thực (Real-time Dashboard) giúp số hóa 100% quá trình ươm mầm cho các Vườn ươm và Quỹ đầu tư."
     },
     {
-        question: "Làm thế nào để dự án của tôi tiếp cận được Nhà đầu tư?",
-        answer: "Các dự án trên Kizuna Hub cần trải qua lộ trình ươm tạo và đạt được các cột mốc (traction) nhất định. Khi dự án được các Mentor đánh giá 'Verified' (Đã kiểm chứng), nó sẽ tự động xuất hiện trên Deal-flow Dashboard của các nhà đầu tư."
+        question: "Dự án của sinh viên làm sao để tiếp cận được Quỹ đầu tư?",
+        answer: "Dự án thô buộc phải vượt qua màng lọc AI Pitch Deck để chuẩn hóa logic kinh doanh. Sau đó, chỉ khi nhận được sự 'Bảo chứng tín nhiệm' (Endorsement) bằng review thực tế từ các Mentor tiên phong, hồ sơ mới tự động xuất hiện trên Deal-flow Dashboard của các nhà đầu tư."
     },
     {
-        question: "Tôi là Alumni, tôi có thể tham gia với vai trò gì?",
-        answer: "Alumni có thể quay lại hệ sinh thái với vai trò là Mentor (nếu có chuyên môn và kinh nghiệm thực chiến) hoặc Angel Investor (Nhà đầu tư thiên thần) để dẫn dắt và cấp vốn cho các thế hệ sinh viên tiếp theo."
+        question: "Chuyên gia, Mentor nhận được giá trị gì khi tham gia nền tảng?",
+        answer: "Mentor sẽ không bị lãng phí thời gian đọc 'dự án rác' nhờ màng lọc AI cản lại từ đầu. Đồng thời, nền tảng là công cụ đắc lực để họ săn tìm nhân tài (Deal-flow) từ sớm và xây dựng thương hiệu cá nhân (Ego & Branding) thông qua các dự án mà họ bảo chứng thành công."
     },
     {
-        question: "Hệ thống bảo mật dữ liệu ý tưởng (Pitch Deck) như thế nào?",
-        answer: "Toàn bộ tài liệu, pitch deck và dữ liệu dự án của bạn được lưu trữ an toàn. Chỉ những Mentor được bạn chấp nhận match và Investor đã qua xác thực KYC mới có quyền truy cập vào các tài liệu nội bộ này."
+        question: "Kizuna Hub có thu phí hoa hồng (Success Fee) khi gọi vốn thành công không?",
+        answer: "Hoàn toàn KHÔNG. Để triệt tiêu rủi ro rò rỉ giao dịch ngầm, Kizuna Hub không thu phí hoa hồng. Chúng tôi miễn phí 100% cho sinh viên và chỉ thu doanh thu từ việc bán gói phần mềm (SaaS Subscription) cho các Vườn ươm và Doanh nghiệp cần công cụ quản trị danh mục đầu tư."
     },
     {
-        question: "Kizuna Hub có thu phí nền tảng không?",
-        answer: "Nền tảng hoàn toàn miễn phí cho sinh viên (Founders) giai đoạn ươm tạo ban đầu. Chúng tôi chỉ thu phí dịch vụ phần mềm (SaaS) đối với các tính năng quản trị nâng cao dành cho Quỹ đầu tư và Doanh nghiệp."
+        question: "Hệ thống giám sát dự án (Incubation Progress) hoạt động ra sao?",
+        answer: "Mọi cột mốc (Milestones, KPI) trong quá trình Founder làm việc với Mentor đều được cập nhật real-time. Hệ thống này có tính 'khóa chặt' (Vendor Lock-in), buộc cả Nhà đầu tư và Startup vẫn phải dùng Kizuna Hub như một công cụ CRM để theo dõi sức khỏe dự án ngay cả khi đã chốt deal."
     }
 ];
 
