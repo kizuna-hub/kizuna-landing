@@ -4,13 +4,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
-
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { BillingCycle } from "@/components/pricing/pricing-hero";
 
 export interface PricingPlan {
-  name: "Startup" | "Business" | "Investor";
+  name: string;
   monthlyPrice: string;
   yearlyPrice: string;
   description: string;
@@ -24,120 +23,122 @@ export interface PricingCardProps {
 }
 
 export const pricingCardVariants: Variants = {
-  hidden: { opacity: 0, y: 34 },
+  hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.62, ease: "easeOut" },
+    transition: { duration: 0.5, ease: "easeOut" },
   },
 };
 
 export function PricingCard({ plan, billing }: PricingCardProps) {
-  // Lấy ra chuỗi giá trị (VD: "4.990.000 VNĐ")
   const priceString = billing === "yearly" ? plan.yearlyPrice : plan.monthlyPrice;
-
-  // Tách số và chữ VNĐ ra thành 2 phần
   const [amount, currency] = priceString.split(" ");
+  const isFree = amount === "0";
 
   return (
     <motion.article
       variants={pricingCardVariants}
-      whileHover={{ y: -6 }}
-      transition={{ duration: 0.22, ease: "easeOut" }}
-      className={cn("relative rounded-[28px]", plan.recommended && "lg:-mt-5")}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      // Thêm h-full để article chiếm trọn chiều cao của Grid Cell
+      className="relative rounded-3xl w-full h-full"
     >
+      {/* Hào quang nền xanh nhạt cho thẻ được đề xuất */}
       {plan.recommended ? (
-        <motion.div
+        <div
           aria-hidden="true"
-          className="absolute inset-[-1px] rounded-[29px] opacity-70"
-          style={{
-            background:
-              "linear-gradient(120deg, rgba(255,255,255,0.28), rgba(16,185,129,0.24), rgba(255,255,255,0.18))",
-            backgroundSize: "220% 220%",
-          }}
-          animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-[-2px] rounded-[26px] bg-gradient-to-b from-emerald-400 to-transparent opacity-30 blur-sm"
         />
       ) : null}
 
       <div
         className={cn(
-          "relative flex h-full min-h-[500px] flex-col overflow-hidden rounded-[28px] border bg-white/[0.055] p-7 text-white backdrop-blur-md transition-colors duration-300 sm:p-8",
+          // Thêm h-full để div bên trong cũng chiếm trọn chiều cao
+          "relative flex flex-col overflow-hidden rounded-3xl border transition-colors duration-300 w-full h-full p-6 sm:p-8",
+          // Đồng bộ giao diện, chỉ khác nhau màu border và shadow
           plan.recommended
-            ? "border-white/30 bg-white/[0.075]"
-            : "border-white/10 hover:border-white/20",
+            ? "border-emerald-200 bg-white shadow-[0_8px_30px_rgb(16,185,129,0.12)]"
+            : "border-zinc-200 bg-white shadow-sm hover:shadow-md hover:border-zinc-300"
         )}
       >
+        {/* Header Thẻ */}
         <div className="flex items-start justify-between gap-4">
-          <h2 className="font-[var(--font-serif)] text-3xl text-white">
+          <h2 className="font-serif text-2xl font-bold text-[#0a1c13]">
             {plan.name}
           </h2>
           {plan.recommended ? (
-            <span className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs font-semibold text-white">
-              Recommended
+            <span className="rounded-full bg-emerald-100 px-3 py-1 text-[10px] font-black tracking-widest text-emerald-700 uppercase border border-emerald-200 shrink-0">
+              Recommend
             </span>
           ) : null}
         </div>
 
-        <div className="mt-8">
-          <div className="flex items-end gap-2">
+        {/* Phần Giá Tiền */}
+        <div className="mt-6">
+          <div className="flex items-end gap-1.5">
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
                 key={`${plan.name}-${billing}-${priceString}`}
                 className="flex items-baseline gap-1.5"
-                initial={{ opacity: 0, y: 14, filter: "blur(5px)" }}
+                initial={{ opacity: 0, y: 10, filter: "blur(4px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                exit={{ opacity: 0, y: -14, filter: "blur(5px)" }}
-                transition={{ duration: 0.26, ease: "easeOut" }}
+                exit={{ opacity: 0, y: -10, filter: "blur(4px)" }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
               >
-                {/* Phần Số To */}
-                <span className="inline-block text-5xl font-semibold leading-none tracking-normal text-white xl:text-6xl">
-                  {amount}
+                <span className="inline-block text-4xl font-black leading-none tracking-tight text-[#0a1c13] xl:text-5xl">
+                  {isFree ? "Miễn phí" : amount}
                 </span>
-                {/* Phần Chữ VNĐ Nhỏ */}
-                {currency && (
-                  <span className="text-xl font-medium text-zinc-300">
+                {!isFree && currency && (
+                  <span className="text-base font-bold text-[#0a1c13]">
                     {currency}
                   </span>
                 )}
               </motion.div>
             </AnimatePresence>
-            <span className="pb-1.5 text-sm font-medium text-zinc-400">
-              / tháng
-            </span>
+            {!isFree && (
+              <span className="pb-1 text-[11px] font-bold text-[#0a1c13] uppercase tracking-widest">
+                / tháng
+              </span>
+            )}
           </div>
-          <p className="mt-3 text-sm text-zinc-400">
-            {billing === "yearly"
-              ? "Thanh toán hằng năm, đã áp dụng Save 16%."
-              : "Thanh toán theo từng tháng, linh hoạt hủy bất cứ lúc nào."}
+          <p className="mt-2 text-[11px] font-medium text-zinc-500 leading-relaxed min-h-[34px]">
+            {isFree
+              ? "Trải nghiệm không giới hạn để làm quen hệ thống."
+              : billing === "yearly"
+                ? "Tiết kiệm hơn. Thanh toán mỗi năm một lần."
+                : "Thanh toán từng tháng, hủy bất kỳ lúc nào."}
           </p>
         </div>
 
-        <p className="mt-8 min-h-[72px] text-base leading-7 text-zinc-200">
+        {/* Mô tả ngắn */}
+        <p className="mt-4 text-xs leading-relaxed text-zinc-600 font-medium pb-5 border-b border-zinc-100">
           {plan.description}
         </p>
 
-        <ul className="mt-8 flex flex-col gap-4 text-sm text-zinc-300">
+        {/* Danh sách tính năng (Dùng flex-1 để lấp đầy khoảng trống thừa) */}
+        <ul className="mt-5 flex flex-col gap-3 text-xs font-semibold text-zinc-700 flex-1">
           {plan.features.map((feature) => (
-            <li key={feature} className="flex gap-3">
-              <Check className="mt-0.5 size-5 shrink-0 text-white" aria-hidden="true" />
-              <span>{feature}</span>
+            <li key={feature} className="flex gap-2.5 items-start">
+              <Check className="mt-0.5 size-3.5 shrink-0 text-emerald-500" aria-hidden="true" />
+              <span className="leading-snug">{feature}</span>
             </li>
           ))}
         </ul>
 
+        {/* Nút Call to Action (Bị đẩy xuống sát đáy nhờ flex-1 của thẻ ul ở trên) */}
         <Button
           asChild
           className={cn(
-            "mt-auto h-12 rounded-full border text-sm font-bold transition-all duration-300",
+            "mt-8 h-10 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-300 gap-2 shrink-0 w-full",
             plan.recommended
-              ? "border-white bg-white text-zinc-900 hover:bg-zinc-100"
-              : "border-white/15 bg-white text-zinc-900 hover:bg-zinc-100",
+              ? "bg-[#16452a] text-white hover:bg-[#0a1c13] shadow-md"
+              : "bg-zinc-100 text-zinc-700 hover:bg-zinc-200 border border-zinc-200",
           )}
         >
           <Link href="/signup">
-            Bắt đầu với {plan.name}
-            <ArrowRight className="size-4" aria-hidden="true" />
+            Kích hoạt gói
+            <ArrowRight className="size-3.5" aria-hidden="true" />
           </Link>
         </Button>
       </div>
