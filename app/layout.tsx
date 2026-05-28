@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Outfit, Geist } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+import { Navbar } from "@/components/landing/navbar";
 
-// Dùng Playfair cho Tiêu đề để có độ Đậm (Bold) sắc nét và sang trọng
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-serif"
+  variable: "--font-playfair"
 });
 
 export const metadata: Metadata = {
@@ -23,9 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} font-sans bg-[#102c1e] text-white min-h-full flex flex-col antialiased`}>
-        {children}
+    <html lang="vi">
+      <body className={`${inter.variable} ${outfit.variable} ${geist.variable} ${playfair.variable} font-sans bg-[#102c1e] text-white min-h-full flex flex-col antialiased`}>
+
+        <Navbar theme="dark" />
+
+        {/* Thêm class 'relative' vào đây để fix lỗi tính toán tọa độ cuộn */}
+        <main className="relative flex-1 flex flex-col">
+          {children}
+        </main>
+
       </body>
     </html>
   );

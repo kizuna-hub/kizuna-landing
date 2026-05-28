@@ -5,16 +5,16 @@ import { motion } from "framer-motion";
 
 export function Footer() {
     return (
-        <footer className="w-full bg-[#102c1e] text-zinc-400">
+        <footer className="w-full bg-kizuna-primary text-zinc-400">
             {/* TẦNG 1: THƯƠNG HIỆU & ĐIỀU HƯỚNG */}
-            <div className="mx-auto max-w-7xl px-6 pb-12 pt-20 lg:px-8">
+            <div className="mx-auto max-w-5xl px-6 pb-12 pt-20 lg:px-8">
                 <div className="flex flex-col justify-between gap-16 md:flex-row md:gap-8">
 
                     {/* Cột Trái: Logo, Tagline & Socials */}
                     <div className="flex w-full flex-col md:w-1/3">
                         <div className="flex items-center gap-2 text-white">
                             <span className="font-serif text-2xl font-bold tracking-tight">
-                                Kizuna Hub<span className="text-orange-400">.</span>
+                                Kizuna Hub
                             </span>
                         </div>
 
@@ -77,7 +77,7 @@ export function Footer() {
 
             {/* TẦNG 2: BOTTOM BAR (Copyright & System Status) */}
             <div className="border-t border-white/5">
-                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-8">
+                <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-6 sm:flex-row lg:px-8">
 
                     <p className="text-xs font-medium text-zinc-500">
                         © {new Date().getFullYear()} Kizuna Hub, Inc. Đã đăng ký bản quyền.

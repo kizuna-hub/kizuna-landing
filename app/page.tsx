@@ -12,22 +12,23 @@ import { FeaturesPage } from "./features/page";
 import { CtaSection } from "@/components/landing/cta-section";
 import { Footer } from "@/components/landing/footer";
 import { FAQSection } from "@/components/sections/faq";
+import { EcosystemCTA } from "@/components/landing/cta";
+import { EcosystemValueLoop } from "@/components/landing/value-loop";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#102c1e] text-white overflow-hidden relative">
+    <main className="min-h-screen bg-kizuna-primary text-white overflow-hidden relative">
       <CinematicFX />
-      <Navbar />
       <HeroSection />
       <ManifestoSection />
-      <FeaturesSection />
-      <WorkspaceShowcase />
-      <NetworkShowcase />
+      <EcosystemValueLoop />
       <CanvasConnectedGraph />
-      {/* <SecondaryPeek /> */}
+      <NetworkShowcase />
+      <FeaturesSection />
+      {/* <WorkspaceShowcase /> */}
       <ExpertInsightSection />
       <FAQSection />
-      <CtaSection />
+      <EcosystemCTA />
       <Footer />
     </main>
   );
