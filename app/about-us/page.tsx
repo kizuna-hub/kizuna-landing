@@ -3,10 +3,11 @@ import React from "react";
 import { Navbar } from "@/components/landing/navbar";
 import { Footer } from "@/components/landing/footer";
 
-// Import section The Manifesto vừa tạo
+// Import các section
 import { TheManifestoSection } from "@/components/about-us/sections/the-manifesto";
 import { CoreValuesSection } from "@/components/about-us/sections/core-values";
 import { TheTeamSection } from "@/components/about-us/sections/the-team";
+import { AboutHeroSection } from "@/components/about-us/sections/about-hero-section";
 
 export const metadata = {
     title: "Về chúng tôi | Kizuna Hub",
@@ -15,16 +16,18 @@ export const metadata = {
 
 export default function AboutUsPage() {
     return (
-        // Set min-h-screen và background màu Xanh chủ đạo để đồng bộ toàn trang
+        // Thẻ main vẫn giữ màu nền Xanh chủ đạo cho những đoạn m cần thiết
         <main className="relative min-h-screen w-full bg-[#102c1e] selection:bg-emerald-500/30">
-            {/* Header / Điều hướng */}
-            <Navbar />
 
-            {/* Vùng chứa các Sections - Đẩy padding-top để không bị Navbar đè lên */}
-            <div className="pt-24 md:pt-32">
+            {/* Header / Điều hướng */}
+            {/* Navbar đã được bọc ở layout.tsx rồi thì mày không cần gọi ở đây nữa đâu nhé, nếu gọi 2 lần nó sẽ đè lên nhau sinh lỗi đấy. */}
+
+            {/* ĐÃ SỬA CHỖ NÀY: Xóa bỏ pt-24 md:pt-32 */}
+            <div className="flex flex-col w-full">
 
                 {/* 1. Tuyên ngôn & Khởi nguyên */}
-                <TheManifestoSection />
+                {/* Lớp pt-32 đẩy text xuống dưới đã được code sẵn bên trong AboutHeroSection rồi */}
+                <AboutHeroSection />
 
                 {/* --- CHỖ TRỐNG CHO CÁC SECTION TƯƠNG LAI --- */}
 

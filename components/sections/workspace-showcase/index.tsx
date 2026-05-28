@@ -12,7 +12,7 @@ export const WorkspaceShowcase = () => {
             {/* Khối cực quang mờ siêu nhẹ cho nền trắng */}
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.04),transparent_50%)]" />
 
-            <div className="relative z-10 mx-auto space-y-24 lg:space-y-36 max-w-7xl">
+            <div className="relative z-10 mx-auto space-y-24 lg:space-y-36 max-w-5xl">
                 {workspaceFeatures.map((feature, index) => {
                     const isReversed = index % 2 === 1;
 

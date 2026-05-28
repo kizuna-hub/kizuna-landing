@@ -19,7 +19,7 @@ export function ExpertInsightSection() {
     const scale = useTransform(scrollYProgress, [0, 0.3, 0.85, 1], [0.85, 1, 1, 0.85]);
 
     return (
-        <section ref={containerRef} className="relative bg-[#102c1e] pt-5 pb-20 mt-40 w-full overflow-hidden z-20">
+        <section ref={containerRef} className="relative bg-kizuna-primary pt-5 pb-20 mt-0 w-full overflow-hidden z-20">
             <motion.div
                 style={{ scale }}
                 className="bg-white w-[calc(100%-1.5rem)] md:w-[calc(100%-4rem)] mx-auto rounded-[40px] pt-[4.5rem] pb-8 px-3 shadow-[0_20px_60px_rgba(0,0,0,0.4)] origin-center relative z-10"

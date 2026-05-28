@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -10,8 +11,16 @@ function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
+const navLinks = [
+    { name: "Trang chủ", href: "/" },
+    { name: "Dự án", href: "/project" },
+    { name: "Bảng giá", href: "/pricing" },
+    { name: "Về chúng tôi", href: "/about-us" },
+];
+
 export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
     const [isScrolled, setIsScrolled] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -28,11 +37,21 @@ export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
 
     const useDarkText = isScrolled || theme === "light";
 
+    // XỬ LÝ CLICK: Cho phép TẤT CẢ các trang tự cuộn mượt lên đầu nếu đang đứng ở trang đó
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (pathname === href) {
+            e.preventDefault(); // Chặn việc Next.js xử lý chuyển trang vì đang ở sẵn trang đó rồi
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth", // Cuộn mượt mà
+            });
+        }
+    };
+
     return (
         <motion.header
             className={cn(
                 "fixed top-0 inset-x-0 z-50 flex justify-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
-                // XÓA BỎ BORDER: Chỉ giữ lại khối màu nền đặc #081810
                 !isScrolled && theme === "dark"
                     ? "bg-[#081810]"
                     : "pointer-events-none"
@@ -45,13 +64,14 @@ export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
                 className={cn(
                     "pointer-events-auto flex items-center justify-between transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]",
                     isScrolled
-                        ? "w-[90%] max-w-4xl mt-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] px-4 py-3" // Pill trắng khi cuộn (xóa border thừa)
-                        : "w-full max-w-7xl mt-0 bg-transparent px-6 py-5 shadow-none" // Hòa vào khối màu nền header
+                        ? "w-[90%] max-w-4xl mt-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] px-4 py-3"
+                        : "w-full max-w-7xl mt-0 bg-transparent px-6 py-4 shadow-none"
                 )}
             >
                 {/* LOGO */}
                 <Link
                     href="/"
+                    onClick={(e) => handleNavClick(e, "/")}
                     className={cn(
                         "font-serif font-bold text-2xl tracking-tight flex items-center gap-1 transition-colors duration-500",
                         useDarkText ? "text-[#102c1e]" : "text-white"
@@ -61,11 +81,35 @@ export function Navbar({ theme = "dark" }: { theme?: "dark" | "light" }) {
                 </Link>
 
                 {/* LINKS Ở GIỮA */}
-                <nav className="hidden md:flex items-center gap-10 text-sm font-semibold">
-                    <Link href="/ecosystem" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Hệ sinh thái</Link>
-                    <Link href="/project" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Dự án</Link>
-                    <Link href="/pricing" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Bảng giá</Link>
-                    <Link href="/about-us" className={cn("transition-colors duration-500 hover:opacity-70", useDarkText ? "text-slate-700 hover:text-black" : "text-white/80 hover:text-white")}>Về chúng tôi</Link>
+                <nav className="hidden md:flex items-center gap-10 text-sm font-geist">
+                    {navLinks.map((link) => {
+                        const isActive = pathname === link.href;
+
+                        return (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                onClick={(e) => handleNavClick(e, link.href)} // Gọi hàm xử lý cuộn mượt cho từng link
+                                className={cn(
+                                    "relative py-1 transition-colors duration-500 hover:opacity-70",
+                                    useDarkText
+                                        ? "text-slate-700 hover:text-black"
+                                        : "text-white/80 hover:text-white",
+                                    isActive && (useDarkText ? "text-black font-semibold" : "text-white font-semibold")
+                                )}
+                            >
+                                {link.name}
+
+                                {/* ĐƯỜNG GẠCH DƯỚI KHI ACTIVE */}
+                                {isActive && (
+                                    <span
+                                        className="absolute left-0 -bottom-1 h-[3px] w-full rounded-full bg-current"
+                                        aria-hidden="true"
+                                    />
+                                )}
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 {/* NÚT ACTION BÊN PHẢI */}

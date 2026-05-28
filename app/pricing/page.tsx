@@ -144,8 +144,6 @@ export default function PricingPage() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-white">
-      <Navbar />
-
       <div className="bg-[#102c1e] text-white pb-12">
         <PricingHero billing={billing} onBillingChange={setBilling} />
 

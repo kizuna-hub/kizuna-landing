@@ -94,8 +94,12 @@ const config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-body)'],
-        serif: ['var(--font-heading)'],
+        sans: ['var(--font-inter)'], // mapped to inter
+        inter: ['var(--font-inter)'],
+        outfit: ['var(--font-outfit)'],
+        geist: ['var(--font-geist)'],
+        segoe: ['"Segoe UI"', 'Roboto', 'sans-serif'],
+        serif: ['var(--font-playfair)'],
         mono: ['var(--font-code)'],
       },
       fontSize: {

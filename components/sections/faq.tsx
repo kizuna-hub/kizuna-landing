@@ -75,7 +75,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 // Layout Component chính
 export function FAQSection() {
     return (
-        <section className="w-full bg-white py-32 px-6 lg:px-8">
+        <section className="w-full bg-[#fafafa] py-32 px-6 lg:px-8">
             <div className="mx-auto max-w-3xl">
 
                 {/* CỤM TIÊU ĐỀ ĐÃ ĐƯỢC CẬP NHẬT */}

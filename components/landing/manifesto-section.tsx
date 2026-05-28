@@ -14,7 +14,7 @@ export function ManifestoSection() {
 
     return (
         <div className="min-h-screen bg-kizuna-primary flex items-center justify-center py-32 relative z-30">
-            <div className="max-w-[38rem] w-full px-6 flex flex-col gap-8 text-zinc-200 font-serif text-[2rem] md:text-[2.25rem] leading-[1.15] tracking-tight">
+            <div className="max-w-[38rem] w-full px-6 flex flex-col gap-8 text-zinc-200 font-geist text-[14px] md:text-[1.75rem] leading-[1.15] tracking-tight">
                 {paragraphs.map((text, index) => (
                     <motion.p
                         key={index}
