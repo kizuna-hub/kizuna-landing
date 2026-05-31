@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={`${inter.variable} ${outfit.variable} ${geist.variable} ${playfair.variable} font-sans bg-[#102c1e] text-white min-h-full flex flex-col antialiased`}>
+      <body className={`${inter.variable} ${outfit.variable} ${geist.variable} ${playfair.variable} font-sans bg-background text-foreground min-h-screen flex flex-col antialiased`}>
 
         <Navbar theme="dark" />
 

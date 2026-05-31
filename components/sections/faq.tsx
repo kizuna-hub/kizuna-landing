@@ -33,12 +33,12 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="border-b border-zinc-200">
+        <div className="border-b border-border">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-[#102c1e]/70"
+                className="flex w-full items-center justify-between py-6 text-left transition-colors hover:text-primary/70"
             >
-                <span className="text-lg font-medium text-[#102c1e] md:text-xl">
+                <span className="font-heading text-body-lg md:text-heading-sm text-foreground">
                     {question}
                 </span>
 
@@ -46,7 +46,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
                 <motion.div
                     animate={{ rotate: isOpen ? 45 : 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-[#102c1e]"
+                    className="ml-4 flex h-6 w-6 shrink-0 items-center justify-center text-foreground"
                 >
                     <Plus className="h-6 w-6" strokeWidth={1.5} />
                 </motion.div>
@@ -62,7 +62,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
                         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
                         className="overflow-hidden"
                     >
-                        <p className="pb-6 pr-12 text-base leading-relaxed text-zinc-600">
+                        <p className="pb-6 pr-12 font-sans text-body-md leading-relaxed text-muted-foreground">
                             {answer}
                         </p>
                     </motion.div>
@@ -75,7 +75,7 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
 // Layout Component chính
 export function FAQSection() {
     return (
-        <section className="w-full bg-[#fafafa] py-32 px-6 lg:px-8">
+        <section className="w-full bg-transparent py-section px-6 lg:px-8 border-t border-border">
             <div className="mx-auto max-w-3xl">
 
                 {/* CỤM TIÊU ĐỀ ĐÃ ĐƯỢC CẬP NHẬT */}
@@ -84,7 +84,7 @@ export function FAQSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-4 font-serif text-4xl font-bold text-[#102c1e] md:text-5xl"
+                        className="mb-4 font-heading text-heading-lg md:text-heading-xl text-foreground"
                     >
                         Câu hỏi thường gặp
                     </motion.h2>
@@ -94,14 +94,14 @@ export function FAQSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-lg text-zinc-500"
+                        className="font-sans text-body-lg text-muted-foreground"
                     >
                         Những thắc mắc phổ biến nhất về cách hoạt động của hệ sinh thái Kizuna Hub.
                     </motion.p>
                 </div>
 
                 {/* Danh sách FAQ */}
-                <div className="flex flex-col border-t border-zinc-200">
+                <div className="flex flex-col border-t border-border">
                     {FAQ_DATA.map((item, index) => (
                         <FAQItem
                             key={index}
