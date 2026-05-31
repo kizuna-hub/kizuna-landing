@@ -1,35 +1,46 @@
-import { Navbar } from "@/components/landing/navbar";
-import { HeroSection } from "@/components/landing/hero-section";
-import { ManifestoSection } from "@/components/landing/manifesto-section";
 import { CinematicFX } from "@/components/landing/cinematic-fx";
-import { FeaturesSection } from "@/components/landing/features-section";
-import { WorkspaceShowcase } from "@/components/sections/workspace-showcase";
-import { NetworkShowcase } from "@/components/sections/network-showcase";
+import { HeroSection } from "@/components/landing/hero-section";
+import { EcosystemValueLoop } from "@/components/landing/value-loop";
 import { CanvasConnectedGraph } from "@/components/sections/canvas-connected-graph/index";
-import { SecondaryPeek } from "@/components/landing/secondary-peek";
+import { NetworkShowcase } from "@/components/sections/network-showcase";
+import { FeaturesSection } from "@/components/landing/features-section";
 import { ExpertInsightSection } from "@/components/landing/expert-insight-section";
-import { FeaturesPage } from "./features/page";
-import { CtaSection } from "@/components/landing/cta-section";
-import { Footer } from "@/components/landing/footer";
 import { FAQSection } from "@/components/sections/faq";
 import { EcosystemCTA } from "@/components/landing/cta";
-import { EcosystemValueLoop } from "@/components/landing/value-loop";
+import { Footer } from "@/components/landing/footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-kizuna-primary text-white overflow-hidden relative">
+    <main className="min-h-screen bg-background text-foreground overflow-hidden relative">
       <CinematicFX />
+
+      {/* Hero Section (Dark Band) */}
       <HeroSection />
-      <ManifestoSection />
+
+      {/* Story & Ecosystem Value (Canvas-50 Background) */}
       <EcosystemValueLoop />
+
+      {/* Canvas Feature Showcase */}
       <CanvasConnectedGraph />
+
+      {/* Bento Box Network Details */}
       <NetworkShowcase />
+
+      {/* Feature Bento Boxes */}
       <FeaturesSection />
-      {/* <WorkspaceShowcase /> */}
+
+      {/* Editorial/Insights Section */}
       <ExpertInsightSection />
+
+      {/* FAQ Information Section */}
       <FAQSection />
+
+      {/* CTA Section (Dark Band) */}
       <EcosystemCTA />
+
+      {/* Footer (Dark Band / Deep Forest) */}
       <Footer />
     </main>
   );
 }
+

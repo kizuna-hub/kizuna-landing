@@ -82,13 +82,13 @@
 
   --text-heading-2xl: 5.5rem;
   --text-heading-2xl--line-height: 0.95;
-  --text-heading-2xl--font-weight: 500;
+  --text-heading-2xl--font-weight: 600;
   --text-heading-xl: 4rem;
   --text-heading-xl--line-height: 1;
-  --text-heading-xl--font-weight: 500;
+  --text-heading-xl--font-weight: 600;
   --text-heading-lg: 3rem;
   --text-heading-lg--line-height: 1.05;
-  --text-heading-lg--font-weight: 500;
+  --text-heading-lg--font-weight: 600;
   --text-heading-md: 2.25rem;
   --text-heading-md--line-height: 1.1;
   --text-heading-md--font-weight: 600;
@@ -130,7 +130,7 @@
     --kz-forest-950: 150 50% 6%;
     /* #081810 */
     --kz-forest-900: 150 48% 7%;
-    /* #0a1c13 - MÀU KIZUNA PRIMARY CHUẨN CỦA MÀY */
+    /* #0a1c13 - MÀU KIZUNA PRIMARY */
     --kz-forest-850: 150 47% 12%;
     --kz-forest-800: 146 52% 18%;
     /* Nửa dưới ảnh */
@@ -236,9 +236,10 @@
       0 0 48px hsl(var(--kz-emerald-400) / 0.42);
     --shadow-token-ambient: 0 40px 120px -48px hsl(var(--kz-forest-950) / 0.48);
 
-    --font-heading: var(--font-serif), 'Playfair Display', Georgia, serif;
-    --font-body: var(--font-sans), Inter, ui-sans-serif, system-ui, sans-serif;
-    --font-code: var(--font-mono), 'Geist Mono', 'SFMono-Regular', Consolas, monospace;
+    /* UPDATED FONT MAP */
+    --font-heading: var(--font-serif), 'Outfit', sans-serif;
+    --font-body: var(--font-sans), 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --font-code: var(--font-mono), 'Geist Mono', Consolas, monospace;
 
     --z-hide: -1;
     --z-base: 0;
