@@ -22,7 +22,7 @@ const pricingGridVariants: Variants = {
 
 export function PricingSection({ plans, billing }: PricingSectionProps) {
   return (
-    <section className="mx-auto w-full max-w-6xl px-5 pb-16 sm:px-8">
+    <section className="mx-auto w-full max-w-7xl px-5 pb-16 sm:px-8">
       <motion.div
         aria-label="Pricing plans data room"
         // ĐỔI THÀNH items-stretch ĐỂ ÉP 3 THẺ CAO BẰNG THẰNG CAO NHẤT

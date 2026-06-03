@@ -8,6 +8,7 @@ import { ExpertInsightSection } from "@/components/landing/expert-insight-sectio
 import { FAQSection } from "@/components/sections/faq";
 import { EcosystemCTA } from "@/components/landing/cta";
 import { Footer } from "@/components/landing/footer";
+import { DealFlowSection } from "@/components/landing/project/deal-flow";
 
 export default function Home() {
   return (
@@ -21,13 +22,15 @@ export default function Home() {
       <EcosystemValueLoop />
 
       {/* Canvas Feature Showcase */}
-      <CanvasConnectedGraph />
+      {/* <CanvasConnectedGraph /> */}
 
       {/* Bento Box Network Details */}
-      <NetworkShowcase />
+      {/* <NetworkShowcase /> */}
 
       {/* Feature Bento Boxes */}
       <FeaturesSection />
+
+      <DealFlowSection />
 
       {/* Editorial/Insights Section */}
       <ExpertInsightSection />

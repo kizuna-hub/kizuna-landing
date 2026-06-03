@@ -13,7 +13,7 @@ function cn(...inputs: ClassValue[]) {
 
 const navLinks = [
     { name: "Trang chủ", href: "/" },
-    { name: "Dự án", href: "/project" },
+    // { name: "Dự án", href: "/project" },
     { name: "Bảng giá", href: "/pricing" },
     { name: "Về chúng tôi", href: "/about-us" },
 ];

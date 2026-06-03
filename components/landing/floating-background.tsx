@@ -9,7 +9,7 @@ const BROLL_ITEMS = [
     // --- CỤM BÊN TRÁI (Lấp ló sau góc trái Dashboard) ---
     { id: 1, type: 'image', src: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=600&auto=format&fit=crop', top: '35%', left: '5%', width: '220px', speed: 0.15, badge: 'now' },
     { id: 2, type: 'folder', title: 'Nội dung', top: '41%', left: '21%', width: '180px', speed: 0.22 },
-    { id: 3, type: 'image', src: 'https://images.unsplash.com/photo-1522071823991-b9671f9d7d17?q=80&w=600&auto=format&fit=crop', top: '38%', left: '34.3%', width: '220px', speed: 0.1 },
+    { id: 3, type: 'image', src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=600&auto=format&fit=crop', top: '38%', left: '34.3%', width: '220px', speed: 0.1 },
     { id: 4, type: 'note', title: 'Mục tiêu Quý 3', desc: '1. Khởi chạy landing page mới\n2. Gọi vốn hạt giống...', top: '42%', left: '50%', width: '220px', speed: 0.28 },
 
     // --- CỤM Ở GIỮA (Núp ngay sau lưng Dashboard, sát mép nút bấm) ---
