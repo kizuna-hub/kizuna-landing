@@ -26,7 +26,7 @@ export function ComparisonTable({ plans, sections }: ComparisonTableProps) {
     // Section ngoài cùng: Nền Dark Green (sử dụng bg-transparent nếu trang cha đã set nền tối)
     <section
       aria-labelledby="comparison-heading"
-      className="relative px-4 py-20 bg-[#102c1e] sm:px-6 lg:px-8 lg:py-28"
+      className="relative px-4 py-20 bg-kizuna-primary sm:px-6 lg:px-8 lg:py-28"
     >
       {/* Khối Card màu Trắng nằm chính giữa, giới hạn max-w-6xl, bo góc cực to */}
       <div className="mx-auto w-full max-w-6xl rounded-[2.5rem] bg-white p-8 shadow-2xl sm:p-12 lg:p-16">

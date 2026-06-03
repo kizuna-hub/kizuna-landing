@@ -7,7 +7,7 @@ export function Footer() {
     return (
         <footer className="w-full bg-kizuna-primary text-zinc-400">
             {/* TẦNG 1: THƯƠNG HIỆU & ĐIỀU HƯỚNG */}
-            <div className="mx-auto max-w-5xl px-6 pb-12 pt-20 lg:px-8">
+            <div className="mx-auto max-w-6xl px-6 pb-12 pt-20 lg:px-8">
                 <div className="flex flex-col justify-between gap-16 md:flex-row md:gap-8">
 
                     {/* Cột Trái: Logo, Tagline & Socials */}

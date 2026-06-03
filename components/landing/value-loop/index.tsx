@@ -10,7 +10,7 @@ export function EcosystemValueLoop() {
     const activeStep = LOOP_DATA.find((s) => s.id === activeId) || LOOP_DATA[0];
 
     return (
-        <section className="relative w-full border-t border-white/5 bg-kizuna-primary text-foreground overflow-hidden">
+        <section className="relative w-full bg-kizuna-primary text-foreground overflow-hidden">
             <div className="absolute inset-0 pointer-events-none z-0"
                 style={{ background: "radial-gradient(circle at center, rgba(16, 185, 129, 0.04) 0%, #0a1c13 100%)" }}
             />
