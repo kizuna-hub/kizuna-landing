@@ -25,7 +25,7 @@ export function DashboardPeek({ y }: DashboardPeekProps) {
         <motion.div
             ref={containerRef}
             style={{ y }}
-            className="relative mx-auto w-11/12 max-w-6xl h-[800px] z-20"
+            className="relative mx-auto w-11/12 max-w-6xl h-[700px] z-20"
         >
             {/* KHUNG CHỨA: 
                 - Đã vứt bỏ hoàn toàn shadow khổng lồ gây tối.

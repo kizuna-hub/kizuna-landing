@@ -25,9 +25,9 @@ export function HeroSection() {
             <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-950/20 via-[#0a1c13] to-[#0a1c13]" />
 
             {/* Giữ lại Floating Background chìm phía dưới */}
-            <div className="absolute inset-0 z-0 opacity-80">
+            {/* <div className="absolute inset-0 z-0 opacity-80">
                 <FloatingBackground />
-            </div>
+            </div> */}
 
             {/* Content: Tăng padding bottom để tạo "đất" cho cái ảnh trượt lên mà ko đè chữ */}
             <div className="relative z-10 flex flex-col items-center justify-center min-h-[90vh] pt-32 pb-20 px-4 w-full">
